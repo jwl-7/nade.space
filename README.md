@@ -1,7 +1,7 @@
 # nade.space
 web-app for learning nades in CS:GO
 
-## features
+## Features
 - smokes, flashes, fires, and wallbangs for all standard maps
 - interactive radar map and alphabetized list
 - perfect setpos locations
@@ -12,7 +12,7 @@ web-app for learning nades in CS:GO
 - mobile responsive
 - instructions built into website
 
-## usage
+## Usage
 1. run practice config in offline server
 2. open nade.space in browser
 3. select a map
@@ -21,12 +21,12 @@ web-app for learning nades in CS:GO
 6. paste location into console
 7. throw nade
 
-## screenshots
+## Screenshots
 [![nade-space-front.png](https://s17.postimg.org/9doiyfrmn/nade-space-front.png)](https://postimg.org/image/poomur44b/)
 [![nade-space-map.png](https://s17.postimg.org/9qfx4zkan/nade-space-map.png)](https://postimg.org/image/da1uusn0b/)
 [![nade-space-nade.png](https://s17.postimg.org/6wcrrjxjz/nade-space-nade.png)](https://postimg.org/image/v03jfug0r/)
 
-## built with
+## Built With
 * HTML5, CSS3, Pure JavaScript
 * [Skeleton](http://getskeleton.com/) - CSS Framework
 * [Snap.svg](http://snapsvg.io/) - JavaScript SVG library
@@ -34,5 +34,5 @@ web-app for learning nades in CS:GO
 * [clipboard.js](https://clipboardjs.com/) - copy text to clipboard
 * [Ubuntu font](https://design.ubuntu.com/font/) - typography
 
-## license
-This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
+## License
+This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
