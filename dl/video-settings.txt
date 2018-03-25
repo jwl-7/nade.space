@@ -1,0 +1,17 @@
+Brightness - 1.7
+Color Mode - Computer Monitor
+Aspect Ratio - Widescreen 16:9
+Resolution - 1920 x 1080
+Display Mode - Fullscreen
+Laptop Power Savings - Disabled
+Global Shadow Quality - High
+Model / Texture Detail - Low
+Effect Detail - Low
+Shader Detail - Low
+Multicore Rendering - Enabled
+Multisampling Anti-Aliasing Mode - 4x MSAA
+Texture Filtering Mode - Anisotropic 4x
+FXAA Anti-Aliasing - Disabled
+Wait for Vertical Sync - Disabled
+Motion Blur - Disabled
+Digital Vibrance - 100 Nvidia / 200 AMD
