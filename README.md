@@ -31,6 +31,8 @@ web-app for learning nades in CS:GO
 * [Skeleton](http://getskeleton.com/) - CSS Framework
 * [Snap.svg](http://snapsvg.io/) - JavaScript SVG library
 * [Crossroads.js](https://millermedeiros.github.io/crossroads.js/) - JavaScript Routes System
+* [clipboard.js](https://clipboardjs.com/) - copy text to clipboard
+* [Ubuntu font](https://design.ubuntu.com/font/) - typography
 
 ## license
 This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
