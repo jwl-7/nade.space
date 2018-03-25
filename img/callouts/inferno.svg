@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="4310" y="1849" font-size="300">CT</text>
+		<text x="420" y="3471" font-size="300">T</text>
+		
+		<text class="site" x="3920" y="3570" font-size="300">A</text>
+		<text class="site" x="2360" y="1215" font-size="300">B</text>
+		
+		<text x="2700" y="3400" font-size="150">MIDDLE</text>
+		<text x="4269" y="4320" font-size="190">PIT</text>
+		<text x="1655" y="3090" font-size="150">T RAMP</text>
+		<text x="1850" y="4045" font-size="150">ALT MIDDLE</text>
+		<text x="3469" y="4234" font-size="90">LONG HALL</text>
+		<text x="4430" y="2955" font-size="60">MOTO</text>
+		<text x="3420" y="3970" font-size="70">PATIO</text>
+		<text x="2700" y="750" font-size="100">CONSTRUCTION</text>	
+		<text x="4013" y="3970" font-size="60">TRUCK</text>
+		<text x="3960" y="4090" font-size="70">BALCONY</text>
+		<text x="2000" y="3841" font-size="70">BALCONY</text>	
+		<text x="2620" y="3257" font-size="60">BENCH</text>
+		<text x="3263" y="3577" font-size="70">BOILER</text>
+		<text x="1750" y="4354" font-size="90">T APARTMENTS</text>
+		<text x="2979" y="4010" font-size="60">WINDOW</text>
+		<text x="1992" y="2543" font-size="90">LOGS</text>
+		<text x="3590" y="2822" font-size="160">ARCH SIDE</text>
+		<text x="3371" y="2690" font-size="60">CUBBY</text>
+		<text x="3062" y="4536" font-size="80">STAIRS</text>
+		<text x="2500" y="4570" font-size="90">BACK ALLEY</text>
+		<text x="2488" y="1830" font-size="100">CAR</text>
+		<text x="2810" y="1990" font-size="60">SANDBAGS</text>
+		<text x="3230" y="1230" font-size="80">TREE</text>
+		<text x="2510" y="1420" font-size="90">C1</text>
+		<text x="2334" y="1420" font-size="90">C2</text>
+		<text x="4380" y="2420" font-size="80">KITCHEN</text>
+		<text x="4432" y="2780" font-size="80">LIBRARY</text>
+		<text x="3590" y="3879" font-size="130">PORCH SIDE</text>
+		<text x="2297" y="920" font-size="70">FOUNTAIN</text>
+		<text x="2700" y="1030" font-size="80">GRILL</text>
+		<text x="3832" y="1620" font-size="80">TERRACE</text>
+		<text x="3972" y="1335" font-size="60">WELL</text>
+		<text y="2140" x="-800" font-size="70" transform="rotate(-90 0 0)">DARK</text>
+		<text y="2150" x="-1400" font-size="70" transform="rotate(-90 0 0)">NEW BOX</text>
+		<text y="1732" x="-4150" font-size="90" transform="rotate(-90 0 0)">BRIDGE</text>
+		<text y="3945" x="-2610" font-size="120" transform="rotate(-90 0 0)">ARCH</text>
+		<text y="3770" x="-1900" font-size="90" transform="rotate(-90 0 0)">SPEEDWAY</text>
+		<text y="3250" x="-4270" font-size="60" transform="rotate(-90 0 0)">DARK</text>
+		<text y="3345" x="-4300" font-size="80" transform="rotate(-90 0 0)">CT APARTMENTS</text>
+		<text y="3130" x="-1100" font-size="140" transform="rotate(-63 0 0)">BANANA</text>
+		<text y="-2555" x="600" font-size="60" transform="rotate(90 0 0)">SPOOLS</text>
+		<text y="-3400" x="3040" font-size="70" transform="rotate(90 0 0)">CLOSE</text>
+		<text y="-2354" x="3456" font-size="60" transform="rotate(90 0 0)">UNDERPASS</text>
+		<text x="2495" y="482" font-size="100">GARDEN</text>
+		<text x="3910" y="3275" font-size="50">BACK</text>
+		<text x="3917" y="3325" font-size="50">SITE</text>
+		<text x="4070" y="3743" font-size="50">DEFAULT</text>
+		<text x="4135" y="3455" font-size="50">HEAD</text>
+		<text x="4135" y="3510" font-size="50">SHOT</text>
+	</g>
+</svg>

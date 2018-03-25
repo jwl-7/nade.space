@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="4000" y="3887" font-size="300">CT</text>
+		<text x="620 " y="1240" font-size="300">T</text>
+		
+		<text class="site" x="2960" y="2461" font-size="300">A</text>
+		<text class="site" x="2430" y="3779" font-size="300">B</text>	
+		
+		<text x="2618" y="900" font-size="190">LONG</text>
+		<text y="-3725" x="1270" font-size="190" transform="rotate(90 0 0)">IVY</text>
+		<text y="-4350" x="2751" font-size="170" transform="rotate(90 0 0)">STAIRS</text>
+		<text y="-1477" x="1970" font-size="90" transform="rotate(90 0 0)">LONG HALL</text>
+		<text y="1700" x="-2490" font-size="90" transform="rotate(-90 0 0)">SHOWERS</text>
+		<text y="-1810" x="1855" font-size="90" transform="rotate(90 0 0)">WHITE HALLS</text>
+		<text y="1380" x="-3620" font-size="90" transform="rotate(-90 0 0)">BOILERS</text>
+		<text y="2010" x="-4050" font-size="60" transform="rotate(-90 0 0)">LADDER</text>
+		<text y="2270" x="-2450" font-size="90" transform="rotate(-90 0 0)">E BOX</text>
+		<text x="2060" y="1930" font-size="100">BLUE TRAIN</text>
+		<text x="2824" y="1930" font-size="80">GREEN TRAIN</text>
+		<text x="2350" y="2210" font-size="100">RED TRAIN</text>
+		<text x="3730" y="2590" font-size="100">A1 TRAIN</text>
+		<text x="4280" y="1969" font-size="140">A2</text>
+		<text x="4280" y="2584" font-size="140">A1</text>
+		<text x="3110" y="2785" font-size="90">HEAVEN</text>
+		<text x="2880" y="3050" font-size="110">CONNECTOR</text>
+		<text x="1760" y="2785" font-size="80">POP DOG</text>
+		<text x="1628" y="3315" font-size="110">RAMP</text>
+		<text x="2647" y="3320" font-size="140">LOWER</text>
+		<text x="2155" y="3455" font-size="100">BLUE TRAIN</text>
+		<text x="3182" y="3460" font-size="100">RED TRAIN</text>
+		<text x="2915" y="3711" font-size="80">YELLOW TRAIN</text>
+		<text x="2845" y="3950" font-size="90">COAL TRAIN</text>
+		<text x="2357" y="4169" font-size="140">UPPER</text>
+	</g>
+</svg>

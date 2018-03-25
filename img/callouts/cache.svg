@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="370" y="2592" font-size="300">CT</text>
+		<text x="4950" y="3385" font-size="300">T</text>
+		
+		<text class="site" x="1697" y="1631" font-size="300">A</text>
+		<text class="site" x="1950" y="4540" font-size="300">B</text>	
+		<text x="1805" y="3173" font-size="270">MIDDLE</text>
+		
+		<text x="2900" y="3157" font-size="220">GARAGE</text>
+		<text x="2500" y="4617" font-size="140">SUNROOM</text>
+		<text x="2414" y="4346" font-size="190">B HALLS</text>
+		<text x="2240" y="4020" font-size="100">B MAIN</text>
+		<text x="1729" y="3634" font-size="120">CHECKERS</text>
+		<text x="2580" y="3420" font-size="80">VENTS</text>
+		<text x="2240" y="3290" font-size="90">MID</text>
+		<text x="2240" y="3390" font-size="90">ROOF</text>
+		<text x="1960" y="3325" font-size="70">SAND</text>
+		<text x="1960" y="3395" font-size="70">BAGS</text>
+		<text x="1460" y="3310" font-size="280">Z</text>
+		<text y="1540" x="-4005" font-size="90" transform="rotate(-90 0 0)">HEAVEN</text>
+		<text x="960" y="4220" font-size="160">TREE</text>
+		<text y="1650" x="-4661" font-size="90" transform="rotate(-90 0 0)">HEADSHOT</text>
+		<text class="plant" x="1746" y="4514" font-size="50">DEFAULT</text>
+		<text class="plant" x="2036" y="4663" font-size="50">BACK</text>
+		<text class="plant" x="2036" y="4719" font-size="50">SITE</text>
+		<text x="970" y="2124" font-size="150">TRUCK</text>
+		<text y="-2520" x="2490" font-size="90" transform="rotate(90 0 0)">CUBBY</text>
+		<text x="2828" y="2740" font-size="90">BOOST</text>
+		<text y="-2600" x="1364" font-size="220" transform="rotate(90 0 0)">A MAIN</text>
+		<text x="2246" y="1817" font-size="90">FORK</text>
+		<text x="1900" y="1950" font-size="90">CATWALK</text>
+		<text y="1900" x="-2870" font-size="170" transform="rotate(-90 0 0)">HIGHWAY</text>
+		<text x="1996" y="2854" font-size="70">WHITE</text>
+		<text x="1996" y="2924" font-size="70">BOX</text>
+		<text y="3247" x="-2350" font-size="180" transform="rotate(-90 0 0)">LONG A</text>
+		<text x="2234" y="1120" font-size="120">SQUEAKY</text>
+		<text x="1633" y="1083" font-size="110">QUAD</text>
+		<text y="2090" x="-1226" font-size="80" transform="rotate(-90 0 0)">FENCE</text>
+		<text x="1820" y="1433" font-size="60">SAFE</text>
+	</g>
+</svg>

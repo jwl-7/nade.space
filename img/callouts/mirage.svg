@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="1430" y="3696" font-size="300">CT</text>
+		<text x="4410" y="1940" font-size="300">T</text>
+		
+		<text class="site" x="2662" y="4020" font-size="300">A</text>
+		<text class="site" x="1075" y="1555" font-size="300">B</text>	
+		
+		<text x="2508" y="2456" font-size="220">MIDDLE</text>
+		<text x="1196" y="1032" font-size="140">B APARTMENTS</text>
+		<text x="3150" y="930" font-size="90">T APARTMENTS</text>
+		<text x="965" y="2380" font-size="160">MARKET</text>
+		<text x="2020" y="1586" font-size="140">CAT</text>
+		<text x="2408" y="2200" font-size="150">CATWALK</text>
+		<text x="3420" y="3319" font-size="90">A RAMP</text>
+		<text x="815" y="1030" transform="rotate(10 820 1050)" font-size="100">VAN</text>
+		<text y="685" x="-1610" transform="rotate(-90 0 0)" font-size="140">BENCH</text>
+		<text y="2260" x="-2150" transform="rotate(-90 0 0)" font-size="90">UNDERPASS</text>
+		<text y="2120" x="-2560" transform="rotate(-90 0 0)" font-size="90">WINDOW</text>
+		<text y="2070" x="-2050" transform="rotate(-90 0 0)" font-size="70">LADDER</text>
+		<text y="2135" x="-2050" transform="rotate(-90 0 0)" font-size="70">ROOM</text>
+		<text y="2430" x="-3745" transform="rotate(-90 0 0)" font-size="100">PALM</text>
+		<text x="1020" y="1625" font-size="70">SAFE</text>
+		<text x="2520" y="1340" font-size="90">STAIRS</text>
+		<text x="1990" y="1260" font-size="80">STOVE</text>
+		<text x="1807" y="2710" font-size="80">VENT</text>
+		<text x="1960" y="3150" font-size="100">JUNGLE</text>
+		<text x="3180" y="3196" font-size="80">TETRIS</text>
+		<text x="2170" y="4150" font-size="80">TICKET</text>	
+		<text y="920" x="-2220" transform="rotate(-90 0 0)" font-size="80">DOOR</text>
+		<text y="1334" x="-2237" transform="rotate(-90 0 0)" font-size="70">WINDOW</text>	
+		<text y="-2535" x="2510" font-size="100" transform="rotate(90 0 0)">CONNECTOR</text>
+		<text y="-3224" x="3540" font-size="90" transform="rotate(90 0 0)">BALCONY</text>
+		<text y="-3600" x="2310" font-size="90" transform="rotate(90 0 0)">CART</text>
+		<text y="-2680" x="3020" font-size="90" transform="rotate(90 0 0)">STAIRS</text>
+		<text x="3560" y="4070" font-size="150">PALACE</text>
+		<text x="2010" y="3980" font-size="70">TRASH</text>
+		<text x="2175" y="2510" font-size="70">BOOST</text>
+		<text x="2870" y="2649" font-size="80">CHAIR</text>
+		<text x="3386" y="2120" font-size="140">TOP</text>
+		<text x="3386" y="2260" font-size="140">MID</text>
+		<text x="2847" y="3290" font-size="70">SAND</text>
+		<text x="2847" y="3365" font-size="70">WICH</text>
+		<text x="3005" y="4040" font-size="70">FIRE</text>
+		<text x="3005" y="4120" font-size="70">BOX</text>
+		<text x="2885" y="3670" font-size="70">TRIPLE</text>
+		<text x="2885" y="3750" font-size="70">STACK</text>
+		<text x="1790" y="4024" font-size="100">CT</text>
+		<text x="1720" y="4130" font-size="100">STAIRS</text>
+		<text x="2490" y="3650" font-size="70">DANGER</text>
+		<text x="2540" y="3720" font-size="70">BOX</text>
+	</g>
+</svg>

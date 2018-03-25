@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="1438" y="4713" font-size="300">CT</text>
+		<text x="3629" y="868" font-size="300">T</text>
+		
+		<text class="site" x="939" y="4713" font-size="300">A</text>
+		<text class="site" x="3906" y="4084" font-size="300">B</text>
+		
+		<text x="1900" y="2624" font-size="300">Z</text>
+		<text x="496" y="2735" font-size="170">HAY</text>
+		<text y="270" x="-4700" font-size="170" transform="rotate(-74 200 -1500)">LONG A</text>
+		<text y="920" x="-4120" font-size="100" transform="rotate(-90 0 0)">WOOD</text>
+		<text x="919" y="5055" font-size="100">WINE</text>
+		<text x="1160" y="4810" font-size="70">SAFE</text>
+		<text x="1092" y="4530" font-size="60">DEFAULT</text>
+		<text x="1522" y="4242" font-size="110">VAN</text>
+		<text x="1340" y="3590" font-size="190">CT</text>
+		<text x="1340" y="3779" font-size="190">RAMP</text>
+		<text y="4130" x="100" font-size="70" transform="rotate(10 3780 8000)">CUBBY</text>
+		<text x="846" y="3252" font-size="100">STAIRS</text>
+		<text x="1290" y="2911" font-size="90">UNDERPASS</text>
+		<text x="2280" y="2677" font-size="90">DRAGON</text>
+		<text x="1623" y="1500" font-size="90">CART</text>
+		<text x="1640" y="1177" font-size="150">COURTYARD</text>
+		<text x="3730" y="1320" font-size="120">PICNIC</text>
+		<text x="3666" y="1931" font-size="130">GARDEN</text>
+		<text x="2871" y="2652" font-size="100">B HALLS</text>
+		<text x="3550" y="3280" font-size="120">LONG B</text>
+		<text x="3370" y="3920" font-size="90">ROCK</text>
+		<text x="1320" y="2535" font-size="110">MID RAMP</text>
+		<text x="2178" y="4260" font-size="110">CONNECTOR</text>
+		<text x="1845" y="4680" font-size="70">BALCONY</text>
+		<text x="2760" y="3641" font-size="120">DROP</text>
+		<text x="1882" y="4050" font-size="90" transform="rotate(-12 2000 4000)">DOOR</text>
+		<text y="1960" x="-1550" font-size="140" transform="rotate(-65 -200 -100)">CAT</text>
+		<text y="-1050" x="4320" font-size="80" transform="rotate(75 -400 0)">VENT</text>
+		<text y="-974" x="4550" font-size="120" transform="rotate(77 0 0)">HUT</text>
+		<text y="-3210" x="3070" font-size="100" transform="rotate(90 0 0)">B MAIN</text>
+		<text y="-3028" x="3134" font-size="90" transform="rotate(90 0 0)">SPIRAL</text>
+		<text y="-2418" x="1520" font-size="140" transform="rotate(90 0 0)">MID PLAT</text>
+		<text y="-4070" x="3880" font-size="70" transform="rotate(80 -700 0)">DEFAULT</text>
+		<text y="3600" x="3530" font-size="110" transform="rotate(-20 4000 3000)">TREE</text>
+		<text y="3987" x="4560" font-size="90" transform="rotate(12 2000 2000)">CHICKEN</text>
+		<text y="3960" x="-5090" font-size="100" transform="rotate(-76 0 -2000)">ARCHES</text>
+		<text y="900" x="4210" font-size="130" transform="rotate(39 1000 2000)">B PLAT</text>
+	</g>
+</svg>

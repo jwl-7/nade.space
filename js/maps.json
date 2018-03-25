@@ -1,0 +1,10 @@
+{
+    "dust2": "js\/maps\/dust2.json",
+    "cache": "js\/maps\/cache.json",
+    "inferno": "js\/maps\/inferno.json",
+    "mirage": "js\/maps\/mirage.json",
+    "train": "js\/maps\/train.json",
+    "overpass": "js\/maps\/overpass.json",
+    "nuke": "js\/maps\/nuke.json",
+    "cbble": "js\/maps\/cbble.json"
+}

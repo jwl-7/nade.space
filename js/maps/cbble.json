@@ -1,0 +1,316 @@
+{
+    "name": "Cobblestone",
+    "minimap": "img\/maps\/de_cbble_radar.png",
+    "callouts": "img\/callouts\/cbble.svg",
+    "thumb": "img\/maps\/de_cbble.png",
+    "pos_x": -3840,
+    "pos_y": 3072,
+    "scale": 6,
+    "smokes": [{
+        "from": "Hay",
+        "to": "Door [A]",
+        "team": "T",
+        "type": "Walk-Throw",
+        "loc": [-3346, 456, -1898, -1024, -1870, -930],
+        "img": "img\/smokes\/cbble\/hay-door-a.jpg",
+		"copy": "setpos -3346.178711 455.572449 0.09381100000000231;setang -40.327240 -45.610413 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/TornMajorGazelle.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/TornMajorGazelle.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/TornMajorGazelle.gif"
+	}, {
+		"from": "Cat",
+        "to": "Balcony",
+        "team": "T",
+        "type": "Jump-Throw",
+        "loc": [-3296, 80, -1846, -1633, -1770, -1546],
+        "img": "img\/smokes\/cbble\/cat-balcony.jpg",
+		"copy": "setpos -3296.005127 79.968750 -29.968750;setang -29.039982 -49.757030 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/FavorableHighBubblefish.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/FavorableHighBubblefish.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/FavorableHighBubblefish.gif"
+	}, {
+		"from": "Cat",
+        "to": "Vent",
+        "team": "T",
+        "type": "Walk-Throw",
+        "loc": [-3296, 80, -1936, -1114, -1969, -1199],
+        "img": "img\/smokes\/cbble\/cat-vent.jpg",
+		"copy": "setpos -3295.975586 79.968750 -29.968750;setang -37.059868 -41.570786 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/AdoredDiligentGelada.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AdoredDiligentGelada.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AdoredDiligentGelada.gif"
+	}, {
+		"from": "Cat",
+        "to": "Van [&#9668;]",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-3296, 80, -2195, -1253],
+        "img": "img\/smokes\/cbble\/cat-van-l.jpg",
+		"copy": "setpos -3295.975586 79.968750 -29.906188999999998;setang -36.664104 -50.392738 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/CalculatingFemaleCattle.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/CalculatingFemaleCattle.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/CalculatingFemaleCattle.gif"
+	}, {
+		"from": "Cat",
+        "to": "Van [&#9658;]",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-3168, 80, -2382, -1515],
+        "img": "img\/smokes\/cbble\/cat-van-r.jpg",
+		"copy": "setpos -3168.031250 79.968750 -29.906188999999998;setang -47.158157 -65.556221 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/ThirdDecentHusky.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ThirdDecentHusky.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ThirdDecentHusky.gif"
+	}, {
+		"from": "Hay",
+        "to": "Grassy",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-3167, 585, -2642, -379, -2552, -779],
+        "img": "img\/smokes\/cbble\/hay-grassy.jpg",
+		"copy": "setpos -3167.270508 584.685120 0.09381100000000231;setang -55.144222 -61.434193 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/FearfulLonelyAmericantoad.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/FearfulLonelyAmericantoad.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/FearfulLonelyAmericantoad.gif"
+	}, {
+		"from": "B Main",
+        "to": "B Door",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-340, -80, -753, -1070, -769, -967],
+        "img": "img\/smokes\/cbble\/bmain-bdoor.jpg",
+		"copy": "setpos -339.989960 -80.031250 -31.906188999999998;setang -61.379925 -112.674690 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/CluelessSimplisticGuineafowl.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/CluelessSimplisticGuineafowl.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/CluelessSimplisticGuineafowl.gif"
+	}, {
+		"from": "Spiral",
+        "to": "Drop",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-340, -80, -808, -548, -920, -387, -1017, -529],
+        "img": "img\/smokes\/cbble\/spiral-drop.jpg",
+		"copy": "setpos -752.011841 -80.031250 128.031250;setang -3.928121 -96.816643 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/YoungCavernousCottonmouth.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/YoungCavernousCottonmouth.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/YoungCavernousCottonmouth.gif"
+	}, {
+		"from": "B Main",
+        "to": "Tree",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-340, -80, -229, -316, 21, -520, 31, -420],
+        "img": "img\/smokes\/cbble\/bmain-tree.jpg",
+		"copy": "setpos -340.009552 -80.006195 -31.906188999999998;setang -52.998070 -64.715561 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/TartEthicalCarpenterant.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/TartEthicalCarpenterant.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/TartEthicalCarpenterant.gif"
+	}, {
+		"from": "Mid Plat",
+        "to": "B Site [&#9658;]",
+        "team": "T",
+        "type": "Jump-Throw",
+        "loc": [-1566, 1092, 247, -706],
+        "img": "img\/smokes\/cbble\/midplat-bsite-r.jpg",
+		"copy": "setpos -1566.001343 1091.941406 64.09381099999999;setang -41.761398 -44.687687 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/ThisWarlikeFruitfly.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/ThisWarlikeFruitfly.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/ThisWarlikeFruitfly.gif"
+	}, {
+		"from": "Garden",
+        "to": "B Plat",
+        "team": "T",
+        "type": "Crouch-Throw",
+        "loc": [116, 1043, 452, -247],
+        "img": "img\/smokes\/cbble\/garden-bplat.jpg",
+		"copy": "setpos 116.094803 1043.494507 44.676018;setang -58.310825 -75.495697 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/IncredibleShorttermDuck.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/IncredibleShorttermDuck.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/IncredibleShorttermDuck.gif"
+	}, {
+		"from": "B Main",
+        "to": "Hut",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-340, -80, 494, -1240, 708, -1306, 612, -1289],
+        "img": "img\/smokes\/cbble\/bmain-hut.jpg",
+		"copy": "setpos -340.028198 -80.013443 -31.906188999999998;setang -41.414818 -54.226635 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/KeenMiserableIchthyostega.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/KeenMiserableIchthyostega.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/KeenMiserableIchthyostega.gif"
+	}, {
+		"from": "Connector",
+        "to": "Long B",
+        "team": "CT",
+        "type": "Jump-Throw",
+        "loc": [-1541, -1227, -148, -1, 76, -201],
+        "img": "img\/smokes\/cbble\/connector-longb.jpg",
+		"copy": "setpos -1540.973389 -1226.978027 -25.199188;setang -50.672855 41.294445 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/AptRadiantEquine.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AptRadiantEquine.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AptRadiantEquine.gif"
+	}, {
+		"from": "Balcony",
+        "to": "Long A",
+        "team": "CT",
+        "type": "Throw",
+        "loc": [-1865, -1612, -3011, -557],
+        "img": "img\/smokes\/cbble\/balcony-longa.jpg",
+		"copy": "setpos -1864.968750 -1611.968750 96.031250;setang -10.307981 138.453827 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/GlaringDefinitiveIndianelephant.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/GlaringDefinitiveIndianelephant.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/GlaringDefinitiveIndianelephant.gif"
+	}, {
+		"from": "B Main",
+        "to": "Electric",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-340, -80, -603, -627],
+        "img": "img\/smokes\/cbble\/bmain-electric.jpg",
+		"copy": "setpos -340.002045 -80.008286 -31.906188999999998;setang -77.220078 -115.603859 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/BlaringSpeedyFirefly.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/BlaringSpeedyFirefly.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/BlaringSpeedyFirefly.gif"
+	}
+    ],
+    "fires": [{
+        "from": "B Door",
+        "to": "Long B",
+        "team": "CT",
+        "type": "Run-Throw",
+        "loc": [-824, -1056, 354, -253, 230, -169],
+        "img": "img\/fires\/cbble\/bdoor-longb.jpg",
+		"copy": "setpos -823.986572 -1055.968750 -124.140839;setang -17.891586 34.188469 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/AlertHonoredGreendarnerdragonfly.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/AlertHonoredGreendarnerdragonfly.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/AlertHonoredGreendarnerdragonfly.gif"
+	}, {
+		"from": "Long B",
+        "to": "Tree [&#9650;]",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-156, -16, -211, -349, 34, -526],
+        "img": "img\/fires\/cbble\/longb-tree-u.jpg",
+		"copy": "setpos -155.968750 -16.003326 -31.968752; setang -38.095234 -99.512100 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/FittingAmazingBlueandgoldmackaw.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/FittingAmazingBlueandgoldmackaw.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/FittingAmazingBlueandgoldmackaw.gif"
+	}
+    ],
+    "flashes": [{
+        "from": "Spiral",
+        "to": "Drop",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-780, 112, -806, -547, -899, -386],
+        "img": "img\/flashes\/cbble\/spiral-drop.jpg",
+		"copy": "setpos -780.031250 111.931717 128.093811;setang -4.768500 -92.183800 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/WhoppingUncommonHorse.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/WhoppingUncommonHorse.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/WhoppingUncommonHorse.gif"
+	}, {
+		"from": "Cat",
+        "to": "Hay",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-2840, 1392, -3008, 538],
+        "img": "img\/flashes\/cbble\/cat-hay.jpg",
+		"copy": "setpos -2839.968750 1391.968750 0.031250; setang -33.439938 -101.137947 0.00"
+	}, {
+		"from": "Mid Ramp",
+        "to": "Underpass",
+        "team": "T",
+        "type": "Throw",
+        "loc": [-2318, 1448, -2369, 351],
+        "img": "img\/flashes\/cbble\/midramp-underpass.jpg",
+		"copy": "setpos -2317.961670 1448.208740 -30.353025; setang 2.780721 -92.676872 0.00"
+	}, {
+		"from": "Rock",
+        "to": "Long B",
+        "team": "CT",
+        "type": "Throw",
+        "loc": [-320, -969, 41, -175],
+        "img": "img\/flashes\/cbble\/rock-longb.jpg",
+		"copy": "setpos -320.275513 -969.451233 -113.763802;setang -33.123112 65.500221 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/RemoteSillyFieldspaniel.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/RemoteSillyFieldspaniel.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/RemoteSillyFieldspaniel.gif"
+	}, {
+		"from": "Arches",
+        "to": "Long B",
+        "team": "CT",
+        "type": "Throw",
+        "loc": [847, -936, 288, -155],
+        "img": "img\/flashes\/cbble\/arches-longb.jpg",
+		"copy": "setpos 846.853455 -936.457153 -104.911270;setang -24.315462 125.642365 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/JointSadGavial.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/JointSadGavial.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/JointSadGavial.gif"
+	}, {
+		"from": "Grassy",
+        "to": "CT Ramp",
+        "team": "CT",
+        "type": "Throw",
+        "loc": [-2588, -590, -2534, -743, -2462, -537],
+        "img": "img\/flashes\/cbble\/grassy-ctramp.jpg",
+		"copy": "setpos -2587.859863 -589.567139 26.807899000000006;setang -50.110405 -70.796562 "
+	}, {
+		"from": "Stairs",
+        "to": "Underpass",
+        "team": "CT",
+        "type": "Throw",
+        "loc": [-2652, -152, -2910, -37, -2563, 124],
+        "img": "img\/flashes\/cbble\/stairs-underpass.jpg",
+		"copy": "setpos -2652.001221 -151.991699 -95.968750;setang -3.519827 155.925278 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/DeadSoggyAdeliepenguin.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/DeadSoggyAdeliepenguin.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/DeadSoggyAdeliepenguin.gif"
+	}
+    ],
+	"wbangs": [{
+        "from": "B Plat",
+        "to": "Drop",
+        "team": "T",
+        "type": "Solid",
+        "loc": [510, -165, -462, -704],
+        "img": "img\/wbangs\/cbble\/bplat-drop.jpg",
+		"copy": "setpos 509.855225 -165.424210 0.031250;setang 1.698489 -150.528610 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/BarrenAgreeableDaddylonglegs.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/BarrenAgreeableDaddylonglegs.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/BarrenAgreeableDaddylonglegs.gif"
+    }, {
+        "from": "CT Ramp",
+        "to": "Vent",
+        "team": "T",
+        "type": "Solid",
+        "loc": [-2145, -675, -2068, -1242],
+        "img": "img\/wbangs\/cbble\/ctramp-vent.jpg",
+		"copy": "setpos -2145.198975 -674.826050 -72.207024;setang -7.232367 -81.339714 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/LegitimateBlackandwhiteGoldfinch.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/LegitimateBlackandwhiteGoldfinch.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/LegitimateBlackandwhiteGoldfinch.gif"
+    }, {
+        "from": "CT Ramp",
+        "to": "Cubby",
+        "team": "T",
+        "type": "Solid",
+        "loc": [-2151, -645, -2544, -605],
+        "img": "img\/wbangs\/cbble\/ctramp-cubby.jpg",
+		"copy": "setpos -2151.530029 -645.403015 -87.147415;setang -16.396009 174.248611 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/PlayfulRightHairstreakbutterfly.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/PlayfulRightHairstreakbutterfly.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/PlayfulRightHairstreakbutterfly.gif"
+    }, {
+        "from": "Drop",
+        "to": "B Doors",
+        "team": "T",
+        "type": "Solid",
+        "loc": [-709, -587, -824, -1056],
+        "img": "img\/wbangs\/cbble\/drop-bdoors.jpg",
+		"copy": "setpos -708.680359 -587.293213 -31.968750;setang 10.556947 -102.835892 0.000000",
+		"webm": "http:\/\/giant.gfycat.com\/HatefulVictoriousHornedtoad.webm",
+        "mp4": "http:\/\/giant.gfycat.com\/HatefulVictoriousHornedtoad.mp4",
+        "gif": "http:\/\/giant.gfycat.com\/HatefulVictoriousHornedtoad.gif"
+    }
+	]
+}

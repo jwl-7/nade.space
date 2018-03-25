@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<style>
+			text {
+				font-family: 'Exo 2', sans-serif;
+				font-weight: 700;
+				cursor: default;
+				opacity: 0.9;
+				fill: #EEE;
+				-webkit-touch-callout: none;
+				  -webkit-user-select: none;
+				   -khtml-user-select: none;
+					 -moz-user-select: none;
+					  -ms-user-select: none;
+						  user-select: none;
+			}
+			text.site {
+				fill: #FD4;
+			}
+			text.dark {
+				fill: #111;
+			}
+		</style>
+
+		<text x="6200" y="3493" font-size="300">CT</text>
+		<text x="977" y="4070" font-size="300">T</text>
+		
+		<text class="site" x="4041" y="3679" font-size="300">A</text>
+		<text class="site" x="3958" y="4142" font-size="300">B</text>	
+		
+		<text x="3369" y="4615" font-size="180">SILO</text>
+		<text x="3805" y="4933" font-size="180">OUTSIDE</text>
+		<text x="3969" y="5262" font-size="100">T RED</text>
+		<text x="4551" y="5354" font-size="100">SECRET</text>
+		<text x="4864" y="4852" font-size="160">GARAGE</text>
+		<text y="4970" x="-4550" transform="rotate(-90 0 0)" font-size="100">CT RED</text>
+		<text x="3990" y="4600" font-size="130">MINI</text>
+		<text x="3219" y="4214" font-size="110">SQUEAKY</text>
+		<text x="3764" y="4317" font-size="80">VENT</text>
+		<text y="3100" x="-4008" transform="rotate(-90 0 0)" font-size="120">ROOF</text>
+		<text y="3340" x="-3648" transform="rotate(-90 0 0)" font-size="100">VENDING</text>
+		<text y="3647" x="-3160" transform="rotate(-90 0 0)" font-size="90">CONTROL</text>
+		<text x="3405" y="3370" font-size="80">TROPHY</text>
+		<text y="3896" x="-4059" transform="rotate(-90 0 0)" font-size="140">HUT</text>
+		<text x="3229" y="3905" font-size="120">LOBBY</text>
+		<text x="3866" y="2247" font-size="90">HEADSHOT</text>
+		<text x="3835" y="2867" font-size="190">RAMP</text>
+		<text x="3887" y="2620" font-size="80">BIG</text>
+		<text x="3887" y="2700" font-size="80">BOX</text>
+		<text y="-4555" x="2785" transform="rotate(90 0 0)" font-size="110">ADMIN</text>
+		<text x="4371" y="3259" font-size="80">HEAVEN</text>
+		<text x="4493" y="3350" font-size="80">HELL</text>
+		<text x="4504" y="3618" font-size="80">LOCKERS</text>
+		<text x="3876" y="3249" font-size="80">RAFTERS</text>
+	</g>
+</svg>
