@@ -69,12 +69,12 @@ button {
 	visibility: visible;
 }
 
-#copyright {
+#nocopyright {
 	padding-bottom: 1em;
 	opacity: .8666;
 }
 
-#copyright-div {
+#nocopyright-div {
 	padding-top: 1em;
 }
 
