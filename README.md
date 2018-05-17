@@ -22,9 +22,9 @@ web-app for learning nades in CS:GO
 7. throw nade
 
 ## Screenshots
-[![nade-space-front.png](https://i.imgur.com/mpItoex.png)](https://postimg.org/image/poomur44b/)
-[![nade-space-map.png](https://i.imgur.com/yscpZbl.png)](https://postimg.org/image/da1uusn0b/)
-[![nade-space-nade.png](https://i.imgur.com/TEFoC6l.png)](https://postimg.org/image/v03jfug0r/)
+[![nade-space-front.png](https://imgur.com/hh8EbdY)](https://imgur.com/hh8EbdY)
+[![nade-space-map.png](https://imgur.com/x8JdMfr)](https://imgur.com/x8JdMfr)
+[![nade-space-nade.png](https://imgur.com/ajVSQzs)](https://imgur.com/ajVSQzs)
 
 ## Built With
 * HTML5, CSS3, Pure JavaScript
