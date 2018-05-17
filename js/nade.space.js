@@ -29,7 +29,7 @@
 // grabs and parses the JSON files containing the maps and nades info
 function getJson(url, callback) {
     (function(url, callback) {
-        var xhttp;	
+        var xhttp;
         if (window.XMLHttpRequest) {
             xhttp = new XMLHttpRequest();
         } else {
@@ -233,8 +233,8 @@ function listMaps(mapIds) {
         var thumb = document.createElement('div');
         thumb.className = 'thumb six columns';
         thumb.innerHTML = '<h4>' + map.name + '</h4>';
-        thumb.style.backgroundImage = 
-			"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";   
+        thumb.style.backgroundImage =
+			"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
 		thumb.addEventListener('click', function() {
 			resetGfy();
 			resetCallouts();
@@ -346,7 +346,7 @@ function updateMapNades(mapName, team, type) {
 					group.add(joint);
 				}
 			}
-			
+
 			var start = s.circle(loc[0], loc[1], {
 				smokes: 40,
 				fires: 40,
@@ -367,13 +367,13 @@ function updateMapNades(mapName, team, type) {
 			});
 
 			group.add(start, end, fakeEnd);
-			
+
             // adds list of nades to nade table
 			(function nadeList() {
 				var tr = document.createElement('tr');
 				tr.style.opacity = 0.5;
 				tr.classList.add('nadeRow');
-				
+
 				var enter = function() {
 					this.parent().append(this);
 					this.attr({
@@ -383,7 +383,7 @@ function updateMapNades(mapName, team, type) {
 					});
 					tr.style.opacity = 1;
 				}.bind(group);
-				
+
 				var leave = function() {
 					this.attr({
 						fill: dark,
@@ -392,7 +392,7 @@ function updateMapNades(mapName, team, type) {
 					});
 					tr.style.opacity = 0.5;
 				}.bind(group);
-				
+
 				var click = function() {
 					hasher.setHash(this.mapName, this.team, this.type, this.i);
 				}.bind({
@@ -438,7 +438,7 @@ function updateMapNades(mapName, team, type) {
 	} else {
 		sortTable();
 	}
-	
+
     return true;
 }
 
@@ -675,7 +675,7 @@ function isMobile() {
 
 // detects if the user is on Safari
 function isSafari() {
-    if (/constructor/i.test(window.HTMLElement) || 
+    if (/constructor/i.test(window.HTMLElement) ||
             (function (p) {
 		        return p.toString() === '[object SafariRemoteNotification]';
 		    })(!window['safari'] || safari.pushNotification)) {

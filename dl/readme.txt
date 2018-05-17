@@ -1,9 +1,9 @@
 ---------------------------------------
-  ___             _   __  __     
- | _ \___ __ _ __| | |  \/  |___ 
+  ___             _   __  __
+ | _ \___ __ _ __| | |  \/  |___
  |   / -_) _` / _` | | |\/| / -_)
  |_|_\___\__,_\__,_| |_|  |_\___|
-                                 
+
 ---------------------------------------
 
 nade.space config-pkg
@@ -20,7 +20,7 @@ Installation:
 	kzpractice.cfg
 	movie.cfg
 	resetbinds.cfg
-	
+
 	launch-options.txt -> right-click csgo in steam library, click 'properties', click 'set launch options...'
 
 Information:
@@ -35,6 +35,6 @@ Information:
 	readme.txt -> this file.
 	resetbinds.cfg -> config to reset binds made in the practice config
 	video-settings.txt -> my personal video settings
-	
+
 Peace & Love,
 	JWL
