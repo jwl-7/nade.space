@@ -12,18 +12,18 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 // removes index.html from url
 (function removeIndex() {
-	if (location.href.indexOf('index.html') >= 0 && window.location.protocol !== 'file:') {
-		location.replace(location.href.replace('index.html', ''));
-	}
+    if (location.href.indexOf('index.html') >= 0 && window.location.protocol !== 'file:') {
+        location.replace(location.href.replace('index.html', ''));
+    }
 })();
 
 // captures and reports javascript errors
 (function stackTrace() {
-	window.addEventListener('error', function(message, file, line, column, errorObj) {
-		if (errorObj !== undefined) {
-			console.log('ERROR: ' + errorObj.stack);
-		}
-	});
+    window.addEventListener('error', function(message, file, line, column, errorObj) {
+        if (errorObj !== undefined) {
+            console.log('ERROR: ' + errorObj.stack);
+        }
+    });
 })();
 
 // grabs and parses the JSON files containing the maps and nades info
@@ -34,15 +34,15 @@ function getJson(url, callback) {
             xhttp = new XMLHttpRequest();
         } else {
             xhttp = new ActiveXObject('Microsoft.XMLHTTP');
-		}
-		xhttp.addEventListener('readystatechange', function() {
+        }
+        xhttp.addEventListener('readystatechange', function() {
             if (xhttp.readyState === XMLHttpRequest.DONE) {
                 if (typeof callback !== 'function') {
                     return;
-				}
+                }
                 if (xhttp.status === 200) {
                     var data = JSON.parse(xhttp.responseText);
-					//console.log('LOADED: ' + url);
+                    //console.log('LOADED: ' + url);
                     callback(data);
                 } else {
                     console.log('FAILED TO GET FILE: ' + url);
@@ -77,7 +77,7 @@ var maps = null;
                 remaining--;
                 if (remaining <= 0) {
                     init();
-				}
+                }
             }.bind(mapids[i]));
         }
     });
@@ -105,7 +105,7 @@ function init() {
         var pages = document.getElementsByClassName('page');
         for (var i = 0; i < pages.length; i++) {
             pages[i].classList.add('hide');
-		}
+        }
     }
 
     // shows the map radar
@@ -113,9 +113,9 @@ function init() {
         console.log('MAP: ' + mapName);
         if (!maps.hasOwnProperty(mapName)) {
             return false;
-		}
+        }
         document.getElementById('nade-image').innerHTML = '';
-		document.getElementById('nade-gfy').innerHTML = '';
+        document.getElementById('nade-gfy').innerHTML = '';
 
         var mapPage = document.getElementById('map-page');
         if (mapPage.classList.contains('hide')) {
@@ -124,12 +124,12 @@ function init() {
             updateMap(mapName);
             if (callback) {
                 callback();
-			}
+            }
         } else {
             updateMap(mapName);
             if (callback) {
                 callback();
-			}
+            }
         }
         return true;
     }
@@ -140,18 +140,18 @@ function init() {
     function showImage(mapName, team, nadeType, id) {
         if (!maps.hasOwnProperty(mapName)) {
             return false;
-		}
+        }
         if (!maps[mapName].hasOwnProperty(nadeType)) {
             return false;
-		}
+        }
         if (!maps[mapName][nadeType].hasOwnProperty(id)) {
             return false;
-		}
+        }
 
         hideAll();
         document.getElementById('nade-page').classList.remove('hide');
         updateImage(maps[mapName][nadeType][id]);
-		updateVideo(maps[mapName][nadeType][id]);
+        updateVideo(maps[mapName][nadeType][id]);
         return true;
     }
 
@@ -160,7 +160,7 @@ function init() {
         document.title = 'nade.space';
         if (mapid) {
             document.title += ' | ' + maps[mapid].name;
-		}
+        }
     }
 
     crossroads.addRoute('', function() {
@@ -174,16 +174,16 @@ function init() {
         document.getElementById('nade-select').value = '';
         if (!showMap(mapName)) {
             revert();
-		}
+        }
         setTitle(mapName);
     });
     crossroads.addRoute('{mapName}/{team}/{nadeType}', function(mapName, team, nadeType) {
         window.scrollTo(0, 0);
-		if(!showCT) {
-			team = 'T';
-		} else {
-			team = 'CT';
-		}
+        if(!showCT) {
+            team = 'T';
+        } else {
+            team = 'CT';
+        }
         document.getElementById('nade-select').value = nadeType;
         if (!showMap(mapName, function() {
                 if (nadeType === 'all') {
@@ -193,17 +193,17 @@ function init() {
                     updateMapNades(mapName, team, 'wbangs');
                 } else if (!updateMapNades(mapName, team, nadeType)) {
                     revert();
-				}
+                }
             }))
             revert();
         setTitle(mapName);
     });
     crossroads.addRoute('{mapName}/{team}/{nadeType}/{id}', function(mapName, team, nadeType, id) {
-		window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         setTitle(mapName);
         if (!showImage(mapName, team, nadeType, id)) {
             revert();
-		}
+        }
     });
 
     function parseHash(newHash, oldHash){
@@ -234,13 +234,13 @@ function listMaps(mapIds) {
         thumb.className = 'thumb six columns';
         thumb.innerHTML = '<h4>' + map.name + '</h4>';
         thumb.style.backgroundImage =
-			"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
-		thumb.addEventListener('click', function() {
-			resetGfy();
-			resetCallouts();
-			resetTeam();
-			resetZoom();
-			hasher.setHash(this, 'T', 'smokes');
+            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + map.thumb + "')";
+        thumb.addEventListener('click', function() {
+            resetGfy();
+            resetCallouts();
+            resetTeam();
+            resetZoom();
+            hasher.setHash(this, 'T', 'smokes');
         }.bind(mapIds[i]));
 
         row.appendChild(thumb);
@@ -257,7 +257,7 @@ function updateMap(mapName) {
     if (!maps.hasOwnProperty(mapName)) {
         if (mapName) {
             alert('Invalid map: ' + mapName);
-		}
+        }
         return false;
     }
     s.clear();
@@ -290,7 +290,7 @@ function updateMap(mapName) {
             callouts.parentNode.insertBefore(callouts, document.getElementById('nadeGroup'));
             if (showCallouts) {
                 document.getElementById('callouts').classList.remove('hide');
-			}
+            }
         });
     }
     return true;
@@ -300,7 +300,7 @@ function updateMap(mapName) {
 function updateMapNades(mapName, team, type) {
     if (!maps.hasOwnProperty(mapName)) {
         return false;
-	}
+    }
     var map = maps[mapName];
     if (!map.hasOwnProperty(type)) {
         return false;
@@ -323,121 +323,121 @@ function updateMapNades(mapName, team, type) {
         var nade = map[type][i];
         if (nade.loc.length < 2) {
             continue;
-		}
+        }
         var loc = nade.loc.map(locMapper);
         var group = s.group();
 
-		if (nade.team === team) {
-			var thickness = {
-				smokes: 30,
-				fires: 30,
-				flashes: 30,
-				wbangs: 30
-			}[type];
+        if (nade.team === team) {
+            var thickness = {
+                smokes: 30,
+                fires: 30,
+                flashes: 30,
+                wbangs: 30
+            }[type];
 
-			for (var j = 3; j < loc.length; j += 2) {
-				var line = s.line.apply(s, loc.slice(j - 3, j + 1)).attr({
-					strokeWidth: thickness,
-					fillOpacity: 0,
-				});
-				group.add(line);
-				if (j + 2 < loc.length) {
-					var joint = s.circle(loc[j - 1], loc[j], thickness / 2);
-					group.add(joint);
-				}
-			}
+            for (var j = 3; j < loc.length; j += 2) {
+                var line = s.line.apply(s, loc.slice(j - 3, j + 1)).attr({
+                    strokeWidth: thickness,
+                    fillOpacity: 0,
+                });
+                group.add(line);
+                if (j + 2 < loc.length) {
+                    var joint = s.circle(loc[j - 1], loc[j], thickness / 2);
+                    group.add(joint);
+                }
+            }
 
-			var start = s.circle(loc[0], loc[1], {
-				smokes: 40,
-				fires: 40,
-				flashes: 40,
-				wbangs: 40
-			}[type]);
+            var start = s.circle(loc[0], loc[1], {
+                smokes: 40,
+                fires: 40,
+                flashes: 40,
+                wbangs: 40
+            }[type]);
 
-			var end = s.use().attr('href', 'img/nade-space/icons.svg#' + type);
-			end.attr({
-				x: loc[loc.length - 2],
-				y: loc[loc.length - 1]
-			});
+            var end = s.use().attr('href', 'img/nade-space/icons.svg#' + type);
+            end.attr({
+                x: loc[loc.length - 2],
+                y: loc[loc.length - 1]
+            });
 
-			var fakeEnd = s.circle(loc[loc.length - 2], loc[loc.length - 1],
-				135).attr({
-				fill: 'transparent',
-				stroke: 'transparent'
-			});
+            var fakeEnd = s.circle(loc[loc.length - 2], loc[loc.length - 1],
+                135).attr({
+                fill: 'transparent',
+                stroke: 'transparent'
+            });
 
-			group.add(start, end, fakeEnd);
+            group.add(start, end, fakeEnd);
 
             // adds list of nades to nade table
-			(function nadeList() {
-				var tr = document.createElement('tr');
-				tr.style.opacity = 0.5;
-				tr.classList.add('nadeRow');
+            (function nadeList() {
+                var tr = document.createElement('tr');
+                tr.style.opacity = 0.5;
+                tr.classList.add('nadeRow');
 
-				var enter = function() {
-					this.parent().append(this);
-					this.attr({
-						fill: light,
-						stroke: light,
-						opacity: 0.9
-					});
-					tr.style.opacity = 1;
-				}.bind(group);
+                var enter = function() {
+                    this.parent().append(this);
+                    this.attr({
+                        fill: light,
+                        stroke: light,
+                        opacity: 0.9
+                    });
+                    tr.style.opacity = 1;
+                }.bind(group);
 
-				var leave = function() {
-					this.attr({
-						fill: dark,
-						stroke: dark,
-						opacity: 0.7
-					});
-					tr.style.opacity = 0.5;
-				}.bind(group);
+                var leave = function() {
+                    this.attr({
+                        fill: dark,
+                        stroke: dark,
+                        opacity: 0.7
+                    });
+                    tr.style.opacity = 0.5;
+                }.bind(group);
 
-				var click = function() {
-					hasher.setHash(this.mapName, this.team, this.type, this.i);
-				}.bind({
-					mapName: mapName,
-					team: team,
-					type: type,
-					i: i
-				});
+                var click = function() {
+                    hasher.setHash(this.mapName, this.team, this.type, this.i);
+                }.bind({
+                    mapName: mapName,
+                    team: team,
+                    type: type,
+                    i: i
+                });
 
-				group.addClass('arrow').attr({
-					fill: dark,
-					stroke: dark,
-					opacity: 0.7,
-					filter: shadow
-				}).hover(enter, leave).click(click);
+                group.addClass('arrow').attr({
+                    fill: dark,
+                    stroke: dark,
+                    opacity: 0.7,
+                    filter: shadow
+                }).hover(enter, leave).click(click);
 
-				if (!isSafari() && !isMobile()) {
-					tr.innerHTML =
-						'<td><svg width="16px" height="16px" viewBox="-128 -128 256 256"><use href="img/nade-space/icons.svg#' +
-						type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
-				} else {
-					tr.innerHTML =
-						'<td><svg width="16px" height="16px" viewBox="-128 -128 256 256"><use xlink:href="img/nade-space/icons.svg#' +
-						type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
-				}
+                if (!isSafari() && !isMobile()) {
+                    tr.innerHTML =
+                        '<td><svg width="16px" height="16px" viewBox="-128 -128 256 256"><use href="img/nade-space/icons.svg#' +
+                        type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
+                } else {
+                    tr.innerHTML =
+                        '<td><svg width="16px" height="16px" viewBox="-128 -128 256 256"><use xlink:href="img/nade-space/icons.svg#' +
+                        type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
+                }
 
-				tr.addEventListener('mouseenter', enter);
-				tr.addEventListener('mouseleave', leave);
-				tr.addEventListener('click', click);
-				document.getElementById('nade-table').appendChild(tr);
-			})();
-		}
+                tr.addEventListener('mouseenter', enter);
+                tr.addEventListener('mouseleave', leave);
+                tr.addEventListener('click', click);
+                document.getElementById('nade-table').appendChild(tr);
+            })();
+        }
 
         document.getElementById('nadeGroup').appendChild(group.node).style.cursor = 'pointer';
     }
-	var emptyTable = document.getElementById('nade-table').innerHTML === '';
-	if (emptyTable) {
-		var list = document.getElementById('nade-list');
-		var tr = document.createElement('tr');
-		tr.classList.add('error-tr');
-		tr.innerHTML = '<td>ERROR: None found!</td>';
-		document.getElementById('nade-table').appendChild(tr);
-	} else {
-		sortTable();
-	}
+    var emptyTable = document.getElementById('nade-table').innerHTML === '';
+    if (emptyTable) {
+        var list = document.getElementById('nade-list');
+        var tr = document.createElement('tr');
+        tr.classList.add('error-tr');
+        tr.innerHTML = '<td>ERROR: None found!</td>';
+        document.getElementById('nade-table').appendChild(tr);
+    } else {
+        sortTable();
+    }
 
     return true;
 }
@@ -457,7 +457,7 @@ function updateImage(nade) {
     var copy = document.getElementById('copy-button');
     copy.setAttribute('data-clipboard-text', nade.copy);
 
-	console.log('IMG: ' + nade.from + ' --> ' + nade.to);
+    console.log('IMG: ' + nade.from + ' --> ' + nade.to);
     document.getElementById('nade-image').appendChild(img);
     document.getElementById('nade-from').innerHTML = nade.from;
     document.getElementById('nade-to').innerHTML = nade.to;
@@ -470,25 +470,25 @@ function updateVideo(nade) {
     document.getElementById('nade-gfy').innerHTML = '';
 
     var vid = document.createElement('video');
-	vid.setAttribute('poster', 'img/nade-space/vid-loading.gif');
-	vid.setAttribute('playsinline', 'true');
-	vid.setAttribute('preload', 'metadata');
+    vid.setAttribute('poster', 'img/nade-space/vid-loading.gif');
+    vid.setAttribute('playsinline', 'true');
+    vid.setAttribute('preload', 'metadata');
     vid.setAttribute('alt', '[nade-gfy]');
-	vid.setAttribute('height', '100%');
-	vid.setAttribute('muted', 'muted');
+    vid.setAttribute('height', '100%');
+    vid.setAttribute('muted', 'muted');
     vid.setAttribute('width', '100%');
     vid.setAttribute('loop', 'true');
-	vid.addEventListener('click', function() {
-		vid.setAttribute('controls', 'true');
-	});
+    vid.addEventListener('click', function() {
+        vid.setAttribute('controls', 'true');
+    });
 
-	if(!isMobile()) {
-		vid.addEventListener('canplaythrough', function() {
-			vid.play();
-		});
-	} else {
-		vid.setAttribute('autoplay', 'true');
-	}
+    if(!isMobile()) {
+        vid.addEventListener('canplaythrough', function() {
+            vid.play();
+        });
+    } else {
+        vid.setAttribute('autoplay', 'true');
+    }
     if (nade.hasOwnProperty('webm')) {
         var src = document.createElement('source');
         src.setAttribute('type', 'video/webm');
@@ -515,18 +515,18 @@ function updateVideo(nade) {
 function changeMap(mapName) {
     if (hasher.getHashAsArray()[1]) {
         hasher.setHash(mapName, hasher.getHashAsArray()[1], hasher.getHashAsArray()[2]);
-	} else {
+    } else {
         hasher.setHash(mapName);
-	}
+    }
 }
 
 // changes team type hash
 function changeTeamType(team) {
     if (team) {
-		hasher.setHash(hasher.getHashAsArray()[0], team, hasher.getHashAsArray()[2]);
+        hasher.setHash(hasher.getHashAsArray()[0], team, hasher.getHashAsArray()[2]);
     } else {
-		hasher.setHash(hasher.getHashAsArray()[0]);
-	}
+        hasher.setHash(hasher.getHashAsArray()[0]);
+    }
 }
 
 // changes nade type hash
@@ -535,7 +535,7 @@ function changeGrenadeType(type) {
         hasher.setHash(hasher.getHashAsArray()[0], hasher.getHashAsArray()[1], type);
     } else {
         hasher.setHash(hasher.getHashAsArray()[0]);
-	}
+    }
 }
 
 
@@ -569,7 +569,7 @@ function resetTeam() {
 
     showCT = false;
     button.textContent = 'Terrorists';
-	button.value = 'T';
+    button.value = 'T';
 }
 
 // resets the user selection to view the nade-gfy
@@ -668,17 +668,17 @@ function isChildOf(child, parent) {
 
 // detects if the user is on a mobile device
 function isMobile() {
-	if (/Mobi/.test(navigator.userAgent)) {
-		return true;
-	}
+    if (/Mobi/.test(navigator.userAgent)) {
+        return true;
+    }
 }
 
 // detects if the user is on Safari
 function isSafari() {
     if (/constructor/i.test(window.HTMLElement) ||
             (function (p) {
-		        return p.toString() === '[object SafariRemoteNotification]';
-		    })(!window['safari'] || safari.pushNotification)) {
+                return p.toString() === '[object SafariRemoteNotification]';
+            })(!window['safari'] || safari.pushNotification)) {
         return true;
     }
 }
