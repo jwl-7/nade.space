@@ -35,6 +35,3 @@ Information:
     readme.txt -> this file.
     resetbinds.cfg -> config to reset binds made in the practice config
     video-settings.txt -> my personal video settings
-
-Peace & Love,
-    JWL
