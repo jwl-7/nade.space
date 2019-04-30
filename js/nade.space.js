@@ -1,6 +1,7 @@
 /* Table of Contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Base Functions
+- Initialization
 - Front Page
 - Map Page
 - Image Page
@@ -10,21 +11,29 @@
 
 /* Base Functions
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// global variables //
+var s = Snap('#map');
+var showCallouts = false;
+var showCT = false;
+var showGFY = false;
+var maps = null;
+
 // removes index.html from url
-(function removeIndex() {
+function removeIndex() {
     if (location.href.indexOf('index.html') >= 0 && window.location.protocol !== 'file:') {
         location.replace(location.href.replace('index.html', ''));
     }
-})();
+}
 
 // captures and reports javascript errors
-(function stackTrace() {
+function stackTrace() {
     window.addEventListener('error', function(message, file, line, column, errorObj) {
         if (errorObj !== undefined) {
             console.log('ERROR: ' + errorObj.stack);
         }
     });
-})();
+}
 
 // grabs and parses the JSON files containing the maps and nades info
 function getJson(url, callback) {
@@ -56,15 +65,8 @@ function getJson(url, callback) {
     })(url, callback);
 }
 
-// global variables //
-var s = Snap('#map');
-var showCallouts = false;
-var showCT = false;
-var showGFY = false;
-var maps = null;
-
 // grabs list of maps located in js/maps.json
-(function grabMaps() {
+function grabMaps() {
     getJson('js/maps.json', function(data) {
         maps = data;
         var mapids = Object.keys(maps);
@@ -81,10 +83,19 @@ var maps = null;
             }.bind(mapids[i]));
         }
     });
-})();
+}
+
+/* Initialization
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// grab list of maps and then initialize page
+grabMaps();
 
 // initialize the main page of nade.space
 function init() {
+    removeIndex();
+    stackTrace();
+
     // shows front page
     (function showFront() {
         var mapIds = Object.keys(maps);
