@@ -1,32 +1,26 @@
 // KZ Binds //
 
-// LJ Bind - crouch jumps + releases w
+// BHOP - jump w/ scroll-up/down
+bind mwheelup +jump; bindmwheeldown +jump
+
+// LJ Bind - crouch jumps & releases w
 alias +LJ "-forward; +duck; +jump"
 alias -LJ "-duck; -jump"
 bind space +LJ
 
-// BHOP - jump w/ scroll-up
-bind mwheelup +jump
+// No-Cj LJ Bind - jumps & releases w
+alias +nocjlj "-forward; +jump"
+alias -nocjlj "-jump"
+bind space +nocjlj
 
-// BHOP - jump w/ scroll-down
-bind mwheeldown +jump
-
-// BHOP - jump w/ scroll-up/down
-bind mwheelup +jump; bindmwheeldown +jump
-
-// KZ Activate - toggle kz settings on/off through console using "kz" + "stopkz"
-alias KZ "sensitivity 4; bind mouse1 +LJ; echo KZ Settings ENABLED"
-alias stopKZ "sensitivity 2; bind mouse1 +attack; echo KZ Settings DISABLED"
-
-// CP/TP Mouse Bind - binds cp to left click and tp to right click
-bind mouse1 "+attack;sm_checkpoint"
-bind mouse2 "+attack2;sm_gocheck "
-
-// Count Jump - toggle scroll-up for crouch using "cj" + "stopcj"
+// Count Jump - toggle scroll-up for crouch using "cj" & "stopcj"
 alias CJ "bind mwheelup +duck; echo Count Jump ENABLED"
 alias stopCJ "bind mwheelup +jump; echo Count Jump DISABLED"
 
-// Non-CrouchJump LJ Bind - jumps + releases w
-alias +nonbindlj "-forward; +jump; +klook"
-alias -nonbindlj "-jump; -klook"
-bind space +nonbindlj
+// CP/TP Mouse Bind - binds cp to left click and tp to right click
+bind mouse1 "+attack; sm_checkpoint"
+bind mouse2 "+attack2; sm_gocheck "
+
+// KZ Activate - toggle kz settings on/off through console using "kz" & "stopkz"
+alias KZ "sensitivity 4; bind mouse1 +LJ; echo KZ Settings ENABLED"
+alias stopKZ "sensitivity 2; bind mouse1 +attack; echo KZ Settings DISABLED"
