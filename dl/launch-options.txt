@@ -1,3 +1,3 @@
 // Launch Options //
 
--novid -tickrate 128
+-novid -tickrate 128 -d3d9ex
