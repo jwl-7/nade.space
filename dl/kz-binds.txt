@@ -1,8 +1,8 @@
 // KZ Binds //
 
 // LJ Bind - crouch jumps + releases w
-alias +LJ "-forward;+duck; +jump; +klook"
-alias -LJ "-duck; -jump; -klook"
+alias +LJ "-forward; +duck; +jump"
+alias -LJ "-duck; -jump"
 bind space +LJ
 
 // BHOP - jump w/ scroll-up
