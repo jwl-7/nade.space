@@ -8,7 +8,7 @@
 */
 
 
-/* Base Styles
+/* Base Functions
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 // removes index.html from url
 (function removeIndex() {
@@ -655,7 +655,13 @@ function sortTable() {
     }
 })();
 
-// detects if element is the child of a parent
+/**
+ * Detects if element is a child of a parent.
+ *
+ * @param {element} child
+ * @param {element} parent
+ * @returns {boolean} True - if element is child of parent, False - if element is not child of parent
+ */
 function isChildOf(child, parent) {
     if (child.parentNode === parent) {
         return true;
@@ -666,14 +672,22 @@ function isChildOf(child, parent) {
     }
 }
 
-// detects if the user is on a mobile device
+/**
+ * Detects if the user is on a mobile device.
+ *
+ * @returns
+ */
 function isMobile() {
     if (/Mobi/.test(navigator.userAgent)) {
         return true;
     }
 }
 
-// detects if the user is on Safari
+/**
+ * Detects if the user's browser is Safari.
+ *
+ * @returns {boolean} True - if browser is Safari
+ */
 function isSafari() {
     if (/constructor/i.test(window.HTMLElement) ||
             (function (p) {
