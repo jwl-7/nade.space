@@ -125,6 +125,8 @@ function init() {
         }
     }
     showFront();
+    accordion();
+    buttons();
 
     /**
      * Hides all elements with the class name 'page'.
@@ -615,65 +617,79 @@ function changeNadeType(type) {
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// returns to previous page
+
+/**
+ * Returns to the previous page.
+ *
+ */
 function revert() {
     setTimeout(function() {
         history.back();
     }, 0);
 }
 
-// resets callouts to hidden
+/**
+ * Resets the callouts to hidden.
+ *
+ * @returns {undefined}
+ */
 function resetCallouts() {
     var button = document.getElementById('toggle-callouts');
     var callouts = document.getElementById('callouts');
-
     if (!callouts) {
         return;
     }
-
     showCallouts = false;
     callouts.classList.add('hide');
     button.textContent = 'Show Callouts';
 }
 
-// resets the team filter back to 'Terrorists'
+/**
+ * Resets the team selection filter back to 'Terrorists'.
+ *
+ */
 function resetTeam() {
     var button = document.getElementById('toggle-team');
-
     showCT = false;
     button.textContent = 'Terrorists';
     button.value = 'T';
 }
 
-// resets the user selection to view the nade-gfy
+/**
+ * Resets the gfy selection on the image page so that it defaults show the image instead of the gfy.
+ *
+ */
 function resetGfy() {
     var button = document.getElementById('toggle-gfy');
     var img = document.getElementById('nade-image');
     var gfy = document.getElementById('nade-gfy');
-
     showGFY = false;
     button.textContent = 'View GFY';
     gfy.classList.add('hide');
     img.classList.remove('hide');
 }
 
-// resets the zoom on the nade-image
+/**
+ * Resets the zoom on the nade image.
+ *
+ */
 function resetZoom() {
     var img = document.getElementById('nade-image');
     img.classList.remove('zoom');
 }
 
-// sorts the nade-table alphabetically
+/**
+ * Sorts the nade table alphabetically.
+ *
+ */
 function sortTable() {
     var table = document.getElementById('nade-table');
     var tableArray = [];
-
     for (var i = 0, len = table.rows.length; i < len; i++) {
         var row = table.rows[i];
         var firstCell = row.cells[1].textContent;
         tableArray.push([firstCell, row]);
     }
-
     tableArray = tableArray.sort(function(a, b) {
         if (a[0] === b[0]) {
             return 0;
@@ -681,21 +697,20 @@ function sortTable() {
             return (a[0] < b[0]) ? -1 : 1;
         }
     });
-
     for (var i = 0, len = tableArray.length; i < len; i++) {
         table.appendChild(tableArray[i][1]);
     }
-
     tableArray = null;
 }
 
-
-// handles the accordion style dropdown for the instruction box
-(function accordion() {
+/**
+ * Handles the accordion style dropdown for the instruction box.
+ *
+ */
+function accordion() {
     var accordionItem = document.getElementsByClassName('accordion-item');
     var accordionHeading = document.getElementsByClassName('accordion-item-heading');
     var accordionContent = document.getElementsByClassName('accordion-item-content');
-
     document.body.addEventListener('click', function (event) {
         var target = event.target || event.srcElement;
         for (i = 0; i < accordionHeading.length; i++) {
@@ -711,7 +726,6 @@ function sortTable() {
             }
         }
     }, false);
-
     for (i = 0; i < accordionHeading.length; i++) {
         accordionHeading[i].addEventListener('click', toggleItem, false);
     }
@@ -726,13 +740,13 @@ function sortTable() {
             this.parentNode.className = 'accordion-item open';
         }
     }
-})();
+}
 
 /**
- * Detects if element is a child of a parent.
+ * Detects if element is a child of a parent. This is used in the accordion function.
  *
- * @param {element} child
- * @param {element} parent
+ * @param {element} child - The child element.
+ * @param {element} parent - The parent element.
  * @returns {boolean} True - if element is child of parent, False - if element is not child of parent.
  */
 function isChildOf(child, parent) {
@@ -770,26 +784,25 @@ function isSafari() {
     }
 }
 
-// handles the functionality for all the buttons
-(function buttons() {
+/**
+ * Handles the functionality for all the buttons.
+ *
+ */
+function buttons() {
     document.getElementById('title').addEventListener('click', function() {
         hasher.setHash('');
     });
-
     document.getElementById('back-button').addEventListener('click', function() {
         history.back();
         resetGfy();
         resetZoom();
     });
-
     document.getElementById('map-select').addEventListener('change', function() {
         changeMap(this.value);
     });
-
     document.getElementById('nade-select').addEventListener('change', function() {
         changeNadeType(this.value);
     });
-
     document.getElementById('toggle-callouts').addEventListener('click', function() {
         var button = document.getElementById('toggle-callouts');
         var callouts = document.getElementById('callouts');
@@ -805,7 +818,6 @@ function isSafari() {
             button.textContent = 'Show Callouts';
         }
     });
-
     document.getElementById('toggle-team').addEventListener('click', function() {
         var button = document.getElementById('toggle-team');
         showCT = !showCT;
@@ -819,7 +831,6 @@ function isSafari() {
             changeTeamType(this.value);
         }
     });
-
     document.getElementById('toggle-gfy').addEventListener('click', function() {
         var button = document.getElementById('toggle-gfy');
         var img = document.getElementById('nade-image');
@@ -835,7 +846,6 @@ function isSafari() {
             gfy.classList.remove('hide');
         }
     });
-
     var clipboard = new Clipboard('.copy');
     clipboard.on('success', function(event) {
         event.clearSelection();
@@ -844,7 +854,6 @@ function isSafari() {
             event.trigger.textContent = 'Copy Location';
         }, 1000);
     });
-
     var img = document.getElementById('nade-image');
     img.addEventListener('click', function() {
         if (img.classList.contains('zoom')) {
@@ -853,4 +862,4 @@ function isSafari() {
             img.classList.add('zoom');
         }
     });
-})();
+}
