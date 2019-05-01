@@ -438,6 +438,7 @@ function updateMapNades(mapName, team, type) {
                 tr.style.opacity = 0.5;
                 tr.classList.add('nadeRow');
 
+                // set properties for elements in the nade table
                 var enter = function() {
                     this.parent().append(this);
                     this.attr({
@@ -447,7 +448,6 @@ function updateMapNades(mapName, team, type) {
                     });
                     tr.style.opacity = 1;
                 }.bind(group);
-
                 var leave = function() {
                     this.attr({
                         fill: dark,
@@ -456,7 +456,6 @@ function updateMapNades(mapName, team, type) {
                     });
                     tr.style.opacity = 0.5;
                 }.bind(group);
-
                 var click = function() {
                     hasher.setHash(this.mapName, this.team, this.type, this.i);
                 }.bind({
@@ -465,7 +464,6 @@ function updateMapNades(mapName, team, type) {
                     type: type,
                     i: i
                 });
-
                 group.addClass('arrow').attr({
                     fill: dark,
                     stroke: dark,
@@ -488,7 +486,6 @@ function updateMapNades(mapName, team, type) {
                 document.getElementById('nade-table').appendChild(tr);
             })();
         }
-
         document.getElementById('nadeGroup').appendChild(group.node).style.cursor = 'pointer';
     }
     var emptyTable = document.getElementById('nade-table').innerHTML === '';
@@ -501,13 +498,18 @@ function updateMapNades(mapName, team, type) {
     } else {
         sortTable();
     }
-
     return true;
 }
 
 
-// Image Page
-// updates the nade image page
+/* Image Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/**
+ * Updates the nade image/gfy page according to the nade selection.
+ *
+ * @param {*} nade
+ */
 function updateImage(nade) {
     document.getElementById('nade-image').innerHTML = '';
 
