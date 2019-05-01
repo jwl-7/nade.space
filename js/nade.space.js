@@ -8,6 +8,7 @@
 - Utilities
 */
 
+
 /* Base Functions
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -84,11 +85,9 @@ function grabMaps() {
         maps = data;
         var mapids = Object.keys(maps);
         var remaining = mapids.length;
-
         for (var i = 0; i < mapids.length; i++) {
             getJson(maps[mapids[i]], function(data) {
                 maps[this] = data;
-
                 remaining--;
                 if (remaining <= 0) {
                     init();
@@ -109,11 +108,13 @@ function init() {
     removeIndex();
     stackTrace();
 
-    // shows front page
-    (function showFront() {
+    /**
+     * Loads the map selections and shows the front page.
+     *
+     */
+    function showFront() {
         var mapIds = Object.keys(maps);
         listMaps(mapIds);
-
         for (var i = 0; i < mapIds.length; i++) {
             var map = maps[mapIds[i]];
             var opt = document.createElement('option');
@@ -122,9 +123,13 @@ function init() {
             document.getElementById('map-select').appendChild(opt);
             document.getElementById('footer').classList.remove('hide');
         }
-    })();
+    }
+    showFront();
 
-    // hides all elements with the class name 'page'
+    /**
+     * Hides all elements with the class name 'page'.
+     *
+     */
     function hideAll() {
         var pages = document.getElementsByClassName('page');
         for (var i = 0; i < pages.length; i++) {
@@ -132,7 +137,13 @@ function init() {
         }
     }
 
-    // shows the map radar
+    /**
+     * Displays the map page.
+     *
+     * @param {string} mapName - The name of the map.
+     * @param {callback} callback - Callback function useful for updating the map page.
+     * @returns {boolean} True - always.
+     */
     function showMap(mapName, callback) {
         console.log('MAP: ' + mapName);
         if (!maps.hasOwnProperty(mapName)) {
@@ -140,7 +151,6 @@ function init() {
         }
         document.getElementById('nade-image').innerHTML = '';
         document.getElementById('nade-gfy').innerHTML = '';
-
         var mapPage = document.getElementById('map-page');
         if (mapPage.classList.contains('hide')) {
             hideAll();
@@ -158,9 +168,15 @@ function init() {
         return true;
     }
 
-    /* Image Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    // shows the nade image page
+    /**
+     * Displays the nade image/gfy page.
+     *
+     * @param {string} mapName - The name of the map.
+     * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+     * @param {string} nadeType - The type of nade being thrown - Smokes / Flashes / Fires / Fires.
+     * @param {integer} id - The number of the nade - identifies which nade to show.
+     * @returns {boolean} True - always.
+     */
     function showImage(mapName, team, nadeType, id) {
         if (!maps.hasOwnProperty(mapName)) {
             return false;
@@ -171,7 +187,6 @@ function init() {
         if (!maps[mapName][nadeType].hasOwnProperty(id)) {
             return false;
         }
-
         hideAll();
         document.getElementById('nade-page').classList.remove('hide');
         updateImage(maps[mapName][nadeType][id]);
@@ -179,14 +194,19 @@ function init() {
         return true;
     }
 
-    // sets title of the page to 'nade.space | (map)'
-    function setTitle(mapid) {
+    /**
+     * Sets the title of the window to 'nade.space | (map)'.
+     *
+     * @param {string} mapName - The name of the map.
+     */
+    function setTitle(mapName) {
         document.title = 'nade.space';
-        if (mapid) {
-            document.title += ' | ' + maps[mapid].name;
+        if (mapName) {
+            document.title += ' | ' + maps[mapName].name;
         }
     }
 
+    // setup crossroads
     crossroads.addRoute('', function() {
         window.scrollTo(0, 0);
         setTitle();
@@ -230,14 +250,15 @@ function init() {
         }
     });
 
+    // setup hasher
     function parseHash(newHash, oldHash){
         crossroads.parse(newHash);
     }
+
     hasher.initialized.add(parseHash);
     hasher.changed.add(parseHash);
     hasher.init();
 }
-
 
 /* Front Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
