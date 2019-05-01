@@ -173,7 +173,7 @@ function init() {
      *
      * @param {string} mapName - The filename of the map's JSON file. 
      * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
-     * @param {string} nadeType - The type of nade being thrown - Smokes / Flashes / Fires / Fires.
+     * @param {string} nadeType - The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
      * @param {integer} id - The number of the nade - identifies which nade to show.
      * @returns {boolean} - True - by default, False - if mapName, nadeType, or id can't be found.
      */
@@ -354,7 +354,7 @@ function updateMap(mapName) {
  *
  * @param {string} mapName - The filename of the map's JSON file. 
  * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
- * @param {string} type - The type of nade throw - Throw, Toss, Lob, Jump-Throw, Run-Throw, Step-Throw, Walk-Throw, Crouch-Throw, Break-throw.
+ * @param {string} type - The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
  * @returns {boolean} - True - by default, False - if mapName or type can't be found.
  */
 function updateMapNades(mapName, team, type) {
@@ -506,22 +506,19 @@ function updateMapNades(mapName, team, type) {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /**
- * Updates the nade image/gfy page according to the nade selection.
+ * Updates the nade image according to the nade selection.
  *
- * @param {*} nade
+ * @param {object} nade - Contains mapName, nadeType, and id.
  */
 function updateImage(nade) {
     document.getElementById('nade-image').innerHTML = '';
-
     var img = document.createElement('img');
     img.setAttribute('alt', '[nade-image]');
     img.setAttribute('height', '100%');
     img.setAttribute('width', '100%');
     img.setAttribute('src', nade.img);
-
     var copy = document.getElementById('copy-button');
     copy.setAttribute('data-clipboard-text', nade.copy);
-
     console.log('IMG: ' + nade.from + ' --> ' + nade.to);
     document.getElementById('nade-image').appendChild(img);
     document.getElementById('nade-from').innerHTML = nade.from;
@@ -530,10 +527,13 @@ function updateImage(nade) {
     document.getElementById('nade-type').innerHTML = nade.type;
 }
 
-// updates the nade gfy
+/**
+ * Updates the nade gfy according to the nade selection.
+ *
+ * @param {object} nade - Contains mapName, nadeType, and id.
+ */
 function updateVideo(nade) {
     document.getElementById('nade-gfy').innerHTML = '';
-
     var vid = document.createElement('video');
     vid.setAttribute('poster', 'img/nade-space/vid-loading.gif');
     vid.setAttribute('playsinline', 'true');
@@ -546,7 +546,6 @@ function updateVideo(nade) {
     vid.addEventListener('click', function() {
         vid.setAttribute('controls', 'true');
     });
-
     if(!isMobile()) {
         vid.addEventListener('canplaythrough', function() {
             vid.play();
@@ -572,11 +571,14 @@ function updateVideo(nade) {
         anc.innerHTML = 'GIF';
         vid.appendChild(anc);
     }
-
     document.getElementById('nade-gfy').appendChild(vid);
 }
 
-// changes map selection hash
+/**
+ * Changes the map selection.
+ *
+ * @param {string} mapName - The filename of the map's JSON file.
+ */
 function changeMap(mapName) {
     if (hasher.getHashAsArray()[1]) {
         hasher.setHash(mapName, hasher.getHashAsArray()[1], hasher.getHashAsArray()[2]);
@@ -585,7 +587,11 @@ function changeMap(mapName) {
     }
 }
 
-// changes team type hash
+/**
+ * Changes the team selection.
+ *
+ * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+ */
 function changeTeamType(team) {
     if (team) {
         hasher.setHash(hasher.getHashAsArray()[0], team, hasher.getHashAsArray()[2]);
@@ -594,15 +600,18 @@ function changeTeamType(team) {
     }
 }
 
-// changes nade type hash
-function changeGrenadeType(type) {
+/**
+ * Changes the nade type.
+ *
+ * @param {string} type - The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
+ */
+function changeNadeType(type) {
     if (type) {
         hasher.setHash(hasher.getHashAsArray()[0], hasher.getHashAsArray()[1], type);
     } else {
         hasher.setHash(hasher.getHashAsArray()[0]);
     }
 }
-
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -778,7 +787,7 @@ function isSafari() {
     });
 
     document.getElementById('nade-select').addEventListener('change', function() {
-        changeGrenadeType(this.value);
+        changeNadeType(this.value);
     });
 
     document.getElementById('toggle-callouts').addEventListener('click', function() {
