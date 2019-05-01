@@ -83,16 +83,17 @@ function getJson(url, callback) {
 function grabMaps() {
     getJson('js/maps.json', function(data) {
         maps = data;
-        var mapIds = Object.keys(maps);
-        var remaining = mapIds.length;
-        for (var i = 0; i < mapIds.length; i++) {
-            getJson(maps[mapIds[i]], function(data) {
+        var mapNames = Object.keys(maps);
+        var remaining = mapNames.length;
+        for (var i = 0; i < mapNames.length; i++) {
+            getJson(maps[mapNames[i]], function(data) {
                 maps[this] = data;
                 remaining--;
                 if (remaining <= 0) {
                     init();
                 }
-            }.bind(mapIds[i]));
+            }.bind(mapNames[i]));
+            console.log('mapNames' + mapNames);
         }
     });
 }
@@ -113,12 +114,12 @@ function init() {
      *
      */
     function showFront() {
-        var mapIds = Object.keys(maps);
-        listMaps(mapIds);
-        for (var i = 0; i < mapIds.length; i++) {
-            var map = maps[mapIds[i]];
+        var mapNames = Object.keys(maps);
+        listMaps(mapNames);
+        for (var i = 0; i < mapNames.length; i++) {
+            var map = maps[mapNames[i]];
             var opt = document.createElement('option');
-            opt.setAttribute('value', mapIds[i]);
+            opt.setAttribute('value', mapNames[i]);
             opt.innerHTML = map.name;
             document.getElementById('map-select').appendChild(opt);
             document.getElementById('footer').classList.remove('hide');
@@ -140,7 +141,7 @@ function init() {
     /**
      * Displays the map page.
      *
-     * @param {string} mapName - The name of the map.
+     * @param {string} mapName - The filename of the map's JSON file. 
      * @param {callback} callback - Callback function useful for updating the map page.
      * @returns {boolean} True - always.
      */
@@ -171,7 +172,7 @@ function init() {
     /**
      * Displays the nade image/gfy page.
      *
-     * @param {string} mapName - The name of the map.
+     * @param {string} mapName - The filename of the map's JSON file. 
      * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
      * @param {string} nadeType - The type of nade being thrown - Smokes / Flashes / Fires / Fires.
      * @param {integer} id - The number of the nade - identifies which nade to show.
@@ -197,7 +198,7 @@ function init() {
     /**
      * Sets the title of the window to 'nade.space | (map)'.
      *
-     * @param {string} mapName - The name of the map.
+     * @param {string} mapName - The filename of the map's JSON file. 
      */
     function setTitle(mapName) {
         document.title = 'nade.space';
@@ -266,19 +267,19 @@ function init() {
 /**
  * Creates the map thumbnail elements for the front page.
  *
- * @param {*} mapIds
+ * @param {string} mapNames - The filenames of the JSON files. 
  */
-function listMaps(mapIds) {
+function listMaps(mapNames) {
     var thumbs = document.getElementById('thumbs');
     thumbs.innerHTML = '';
     var row;
-    for (var i = 0; i < mapIds.length; i++) {
+    for (var i = 0; i < mapNames.length; i++) {
         if (i % 2 === 0) {
             row = document.createElement('div');
             row.classList.add('row');
             thumbs.appendChild(row);
         }
-        var map = maps[mapIds[i]];
+        var map = maps[mapNames[i]];
         var thumb = document.createElement('div');
         thumb.className = 'thumb six columns';
         thumb.innerHTML = '<h4>' + map.name + '</h4>';
@@ -290,7 +291,7 @@ function listMaps(mapIds) {
             resetTeam();
             resetZoom();
             hasher.setHash(this, 'T', 'smokes');
-        }.bind(mapIds[i]));
+        }.bind(mapNames[i]));
         row.appendChild(thumb);
     }
 }
