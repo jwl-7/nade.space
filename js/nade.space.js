@@ -262,10 +262,15 @@ function init() {
 
 /* Front Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/**
+ * Creates the map thumbnail elements for the front page.
+ *
+ * @param {*} mapIds
+ */
 function listMaps(mapIds) {
     var thumbs = document.getElementById('thumbs');
     thumbs.innerHTML = '';
-
     var row;
     for (var i = 0; i < mapIds.length; i++) {
         if (i % 2 === 0) {
@@ -273,7 +278,6 @@ function listMaps(mapIds) {
             row.classList.add('row');
             thumbs.appendChild(row);
         }
-
         var map = maps[mapIds[i]];
         var thumb = document.createElement('div');
         thumb.className = 'thumb six columns';
@@ -287,7 +291,6 @@ function listMaps(mapIds) {
             resetZoom();
             hasher.setHash(this, 'T', 'smokes');
         }.bind(mapIds[i]));
-
         row.appendChild(thumb);
     }
 }
