@@ -83,16 +83,16 @@ function getJson(url, callback) {
 function grabMaps() {
     getJson('js/maps.json', function(data) {
         maps = data;
-        var mapids = Object.keys(maps);
-        var remaining = mapids.length;
-        for (var i = 0; i < mapids.length; i++) {
-            getJson(maps[mapids[i]], function(data) {
+        var mapIds = Object.keys(maps);
+        var remaining = mapIds.length;
+        for (var i = 0; i < mapIds.length; i++) {
+            getJson(maps[mapIds[i]], function(data) {
                 maps[this] = data;
                 remaining--;
                 if (remaining <= 0) {
                     init();
                 }
-            }.bind(mapids[i]));
+            }.bind(mapIds[i]));
         }
     });
 }
