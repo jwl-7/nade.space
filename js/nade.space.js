@@ -8,7 +8,6 @@
 - Utilities
 */
 
-
 /* Base Functions
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -19,14 +18,20 @@ var showCT = false;
 var showGFY = false;
 var maps = null;
 
-// removes index.html from url
+/**
+ * Removes 'index.html' from url.
+ *
+ */
 function removeIndex() {
     if (location.href.indexOf('index.html') >= 0 && window.location.protocol !== 'file:') {
         location.replace(location.href.replace('index.html', ''));
     }
 }
 
-// captures and reports javascript errors
+/**
+ * Captures and reports JavaScript errors.
+ *
+ */
 function stackTrace() {
     window.addEventListener('error', function(message, file, line, column, errorObj) {
         if (errorObj !== undefined) {
@@ -35,7 +40,12 @@ function stackTrace() {
     });
 }
 
-// grabs and parses the JSON files containing the maps and nades info
+/**
+ * Grabs and parses JSON files.
+ *
+ * @param {string} url - URL path of the JSON file.
+ * @param {callback} callback - JSON callback function to grab and parse the data.
+ */
 function getJson(url, callback) {
     (function(url, callback) {
         var xhttp;
@@ -65,7 +75,10 @@ function getJson(url, callback) {
     })(url, callback);
 }
 
-// grabs list of maps located in js/maps.json
+/**
+ * Loads JSON files containing map and nades information.
+ *
+ */
 function grabMaps() {
     getJson('js/maps.json', function(data) {
         maps = data;
