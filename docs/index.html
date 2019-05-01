@@ -1,0 +1,1986 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet' />
+  <link href='assets/style.css' rel='stylesheet' />
+  <link href='assets/github.css' rel='stylesheet' />
+  <link href='assets/split.css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+              <li><h2>Base Functions</h2></li>
+                
+                <li><a
+                  href='#removeindex'
+                  class="">
+                  removeIndex
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stacktrace'
+                  class="">
+                  stackTrace
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getjson'
+                  class="">
+                  getJson
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#grabmaps'
+                  class="">
+                  grabMaps
+                  
+                </a>
+                
+                </li>
+              
+                <li><h2>Initialization</h2></li>
+
+                <li><a
+                  href='#showfront'
+                  class="">
+                  showFront
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#hideall'
+                  class="">
+                  hideAll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#showmap'
+                  class="">
+                  showMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#showimage'
+                  class="">
+                  showImage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#settitle'
+                  class="">
+                  setTitle
+                  
+                </a>
+                
+                </li>
+              
+                <li><h2>Front Page</h2></li>
+                
+                <li><a
+                  href='#listmaps'
+                  class="">
+                  listMaps
+                  
+                </a>
+                
+                </li>
+              
+                <li><h2>Map Page</h2></li>
+                
+                <li><a
+                  href='#updatemap'
+                  class="">
+                  updateMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatemapnades'
+                  class="">
+                  updateMapNades
+                  
+                </a>
+                
+                </li>
+              
+                <li><h2>Image Page</h2></li>
+                
+                <li><a
+                  href='#updateimage'
+                  class="">
+                  updateImage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatevideo'
+                  class="">
+                  updateVideo
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#changemap'
+                  class="">
+                  changeMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#changeteamtype'
+                  class="">
+                  changeTeamType
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#changenadetype'
+                  class="">
+                  changeNadeType
+                  
+                </a>
+                
+                </li>
+              
+                <li><h2>Utilities</h2></li>
+                
+                <li><a
+                  href='#revert'
+                  class="">
+                  revert
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resetcallouts'
+                  class="">
+                  resetCallouts
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resetteam'
+                  class="">
+                  resetTeam
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resetgfy'
+                  class="">
+                  resetGfy
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resetzoom'
+                  class="">
+                  resetZoom
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sorttable'
+                  class="">
+                  sortTable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#accordion'
+                  class="">
+                  accordion
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#ischildof'
+                  class="">
+                  isChildOf
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#ismobile'
+                  class="">
+                  isMobile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#issafari'
+                  class="">
+                  isSafari
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#buttons'
+                  class="">
+                  buttons
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='removeindex'>
+      removeIndex
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Removes 'index.html' from url.</p>
+
+    <div class='pre p1 fill-light mt0'>removeIndex()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stacktrace'>
+      stackTrace
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Captures and reports JavaScript errors.</p>
+
+    <div class='pre p1 fill-light mt0'>stackTrace()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getjson'>
+      getJson
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Grabs and parses JSON files.</p>
+
+    <div class='pre p1 fill-light mt0'>getJson(url: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, callback: callback)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    URL path of the JSON file.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(callback)</code>
+	    JSON callback function to grab and parse the data.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='grabmaps'>
+      grabMaps
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Loads JSON files containing map and nades information.</p>
+
+    <div class='pre p1 fill-light mt0'>grabMaps()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showfront'>
+      showFront
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Loads the map selections and shows the front page.</p>
+
+    <div class='pre p1 fill-light mt0'>showFront()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='hideall'>
+      hideAll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Hides all elements with the class name 'page'.</p>
+
+    <div class='pre p1 fill-light mt0'>hideAll()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showmap'>
+      showMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Displays the map page.</p>
+
+    <div class='pre p1 fill-light mt0'>showMap(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, callback: callback): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(callback)</code>
+	    Callback function useful for updating the map page.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - by default, False - if mapName can't be found.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showimage'>
+      showImage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Displays the nade image/gfy page.</p>
+
+    <div class='pre p1 fill-light mt0'>showImage(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, team: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, nadeType: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, id: integer): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>team</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nadeType</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(integer)</code>
+	    The number of the nade - identifies which nade to show.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - by default, False - if mapName, nadeType, or id can't be found.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='settitle'>
+      setTitle
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sets the title of the window to 'nade.space | (map)'.</p>
+
+    <div class='pre p1 fill-light mt0'>setTitle(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='listmaps'>
+      listMaps
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates the map thumbnail elements for the front page.</p>
+
+    <div class='pre p1 fill-light mt0'>listMaps(mapNames: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapNames</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filenames of the JSON files.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatemap'>
+      updateMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Updates the interactive map according to the map selection.</p>
+
+    <div class='pre p1 fill-light mt0'>updateMap(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - by default, False - if mapName can't be found.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatemapnades'>
+      updateMapNades
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Draws the nades on the interactive map.</p>
+
+    <div class='pre p1 fill-light mt0'>updateMapNades(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, team: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>team</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>type</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - by default, False - if mapName or type can't be found.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updateimage'>
+      updateImage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Updates the nade image according to the nade selection.</p>
+
+    <div class='pre p1 fill-light mt0'>updateImage(nade: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nade</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Contains mapName, nadeType, and id.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatevideo'>
+      updateVideo
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Updates the nade gfy according to the nade selection.</p>
+
+    <div class='pre p1 fill-light mt0'>updateVideo(nade: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nade</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Contains mapName, nadeType, and id.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='changemap'>
+      changeMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Changes the map selection.</p>
+
+    <div class='pre p1 fill-light mt0'>changeMap(mapName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The filename of the map's JSON file.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='changeteamtype'>
+      changeTeamType
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Changes the team selection.</p>
+
+    <div class='pre p1 fill-light mt0'>changeTeamType(team: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>team</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='changenadetype'>
+      changeNadeType
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Changes the nade type.</p>
+
+    <div class='pre p1 fill-light mt0'>changeNadeType(type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>type</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The type of nade being thrown - Smokes, Fires, Flashes, Wallbangs.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='revert'>
+      revert
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns to the previous page.</p>
+
+    <div class='pre p1 fill-light mt0'>revert()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resetcallouts'>
+      resetCallouts
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Resets the callouts to hidden.</p>
+
+    <div class='pre p1 fill-light mt0'>resetCallouts(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resetteam'>
+      resetTeam
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Resets the team selection filter back to 'Terrorists'.</p>
+
+    <div class='pre p1 fill-light mt0'>resetTeam()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resetgfy'>
+      resetGfy
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Resets the gfy selection on the image page so that it defaults show the image instead of the gfy.</p>
+
+    <div class='pre p1 fill-light mt0'>resetGfy()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resetzoom'>
+      resetZoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Resets the zoom on the nade image.</p>
+
+    <div class='pre p1 fill-light mt0'>resetZoom()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sorttable'>
+      sortTable
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sorts the nade table alphabetically.</p>
+
+    <div class='pre p1 fill-light mt0'>sortTable()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='accordion'>
+      accordion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Handles the accordion style dropdown for the instruction box.</p>
+
+    <div class='pre p1 fill-light mt0'>accordion()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ischildof'>
+      isChildOf
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Detects if element is a child of a parent. This is used in the accordion function.</p>
+
+    <div class='pre p1 fill-light mt0'>isChildOf(child: <a href="https://developer.mozilla.org/docs/Web/API/Element">element</a>, parent: <a href="https://developer.mozilla.org/docs/Web/API/Element">element</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>child</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/Element">element</a>)</code>
+	    The child element.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>parent</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/Element">element</a>)</code>
+	    The parent element.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - if element is child of parent, False - if element is not child of parent.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ismobile'>
+      isMobile
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Detects if the user is on a mobile device.</p>
+
+    <div class='pre p1 fill-light mt0'>isMobile(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - if mobile device.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='issafari'>
+      isSafari
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Detects if the user's browser is Safari.</p>
+
+    <div class='pre p1 fill-light mt0'>isSafari(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True - if browser is Safari.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='buttons'>
+      buttons
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Handles the functionality for all the buttons.</p>
+
+    <div class='pre p1 fill-light mt0'>buttons()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
