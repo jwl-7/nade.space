@@ -93,7 +93,6 @@ function grabMaps() {
                     init();
                 }
             }.bind(mapNames[i]));
-            console.log('mapNames' + mapNames);
         }
     });
 }
@@ -143,7 +142,7 @@ function init() {
      *
      * @param {string} mapName - The filename of the map's JSON file. 
      * @param {callback} callback - Callback function useful for updating the map page.
-     * @returns {boolean} True - always.
+     * @returns {boolean} - True - by default, False - if mapName can't be found.
      */
     function showMap(mapName, callback) {
         console.log('MAP: ' + mapName);
@@ -176,7 +175,7 @@ function init() {
      * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
      * @param {string} nadeType - The type of nade being thrown - Smokes / Flashes / Fires / Fires.
      * @param {integer} id - The number of the nade - identifies which nade to show.
-     * @returns {boolean} True - always.
+     * @returns {boolean} - True - by default, False - if mapName, nadeType, or id can't be found.
      */
     function showImage(mapName, team, nadeType, id) {
         if (!maps.hasOwnProperty(mapName)) {
@@ -299,7 +298,13 @@ function listMaps(mapNames) {
 
 /* Map Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// updates the map radar according to the map-select selection
+
+/**
+ * Updates the interactive map according to the map selection.
+ *
+ * @param {string} mapName - The filename of the map's JSON file. 
+ * @returns {boolean} - True - by default, False - if mapName can't be found.
+ */
 function updateMap(mapName) {
     document.getElementById('map-select').value = mapName;
     document.getElementById('nade-table').innerHTML = '';
@@ -311,10 +316,10 @@ function updateMap(mapName) {
     }
     s.clear();
 
+    // set up the map radar image, the image scale, and the mouse click coordinates for the nades
     var map = maps[mapName];
     var scale = map.scale * 1024;
     var radar = s.image(map.minimap, 0, 0, scale, scale);
-
     document.getElementById('map').setAttribute('viewBox', [0, 0, scale, scale].join(' '));
     radar.node.onload = function() {
         document.getElementById('map').classList.remove('hide');
@@ -325,7 +330,6 @@ function updateMap(mapName) {
         var dy = scale * (y - box.top) / (box.bottom - box.top);
         //console.log('x, y ('+ (0 | dx) + ', ' + (0 | dy) + ')');
     });
-
     s.group().attr({
         id: 'nadeGroup'
     });
@@ -345,7 +349,14 @@ function updateMap(mapName) {
     return true;
 }
 
-// draws the nades on the interactive map
+/**
+ * Draws the nades on the interactive map.
+ *
+ * @param {string} mapName - The filename of the map's JSON file. 
+ * @param {string} team - The team that the nade is designated for - CT(Counter-Terrorists) / T(Terrorists).
+ * @param {string} type - The type of nade throw - Throw, Toss, Lob, Jump-Throw, Run-Throw, Step-Throw, Walk-Throw, Crouch-Throw, Break-throw.
+ * @returns {boolean} - True - by default, False - if mapName or type can't be found.
+ */
 function updateMapNades(mapName, team, type) {
     if (!maps.hasOwnProperty(mapName)) {
         return false;
@@ -355,6 +366,7 @@ function updateMapNades(mapName, team, type) {
         return false;
     }
 
+    // sets properties of the nades on the interactive map
     var scale = map.scale * 1024;
     var shadow = s.filter(Snap.filter.shadow(0, 0, 20, '#000', 1.0));
     var light = '#fff';
@@ -365,6 +377,7 @@ function updateMapNades(mapName, team, type) {
         wbangs: '#62C462'
     }[type];
 
+    // plots the nades on the interactive map
     var locMapper = function(n, i) {
         return i % 2 === 0 ? n - map.pos_x : map.pos_y - n;
     };
@@ -375,15 +388,14 @@ function updateMapNades(mapName, team, type) {
         }
         var loc = nade.loc.map(locMapper);
         var group = s.group();
-
         if (nade.team === team) {
+            // sets properties of the nade line
             var thickness = {
                 smokes: 30,
                 fires: 30,
                 flashes: 30,
                 wbangs: 30
             }[type];
-
             for (var j = 3; j < loc.length; j += 2) {
                 var line = s.line.apply(s, loc.slice(j - 3, j + 1)).attr({
                     strokeWidth: thickness,
@@ -396,6 +408,7 @@ function updateMapNades(mapName, team, type) {
                 }
             }
 
+            // the circle at the start of the nade line
             var start = s.circle(loc[0], loc[1], {
                 smokes: 40,
                 fires: 40,
@@ -403,12 +416,14 @@ function updateMapNades(mapName, team, type) {
                 wbangs: 40
             }[type]);
 
+            // the icon at the end of the nade line
             var end = s.use().attr('href', 'img/nade-space/icons.svg#' + type);
             end.attr({
                 x: loc[loc.length - 2],
                 y: loc[loc.length - 1]
             });
 
+            // this is used for unhighlighting the nade
             var fakeEnd = s.circle(loc[loc.length - 2], loc[loc.length - 1],
                 135).attr({
                 fill: 'transparent',
@@ -467,7 +482,6 @@ function updateMapNades(mapName, team, type) {
                         '<td><svg width="16px" height="16px" viewBox="-128 -128 256 256"><use xlink:href="img/nade-space/icons.svg#' +
                         type + '" /></svg></td><td>' + nade.from + '</td><td>' + nade.to + '</td>';
                 }
-
                 tr.addEventListener('mouseenter', enter);
                 tr.addEventListener('mouseleave', leave);
                 tr.addEventListener('click', click);
@@ -592,7 +606,6 @@ function changeGrenadeType(type) {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 // returns to previous page
 function revert() {
-    console.log('NOPE...');
     setTimeout(function() {
         history.back();
     }, 0);
@@ -709,7 +722,7 @@ function sortTable() {
  *
  * @param {element} child
  * @param {element} parent
- * @returns {boolean} True - if element is child of parent, False - if element is not child of parent
+ * @returns {boolean} True - if element is child of parent, False - if element is not child of parent.
  */
 function isChildOf(child, parent) {
     if (child.parentNode === parent) {
@@ -724,7 +737,7 @@ function isChildOf(child, parent) {
 /**
  * Detects if the user is on a mobile device.
  *
- * @returns
+ * @returns {boolean} True - if mobile device.
  */
 function isMobile() {
     if (/Mobi/.test(navigator.userAgent)) {
@@ -735,7 +748,7 @@ function isMobile() {
 /**
  * Detects if the user's browser is Safari.
  *
- * @returns {boolean} True - if browser is Safari
+ * @returns {boolean} True - if browser is Safari.
  */
 function isSafari() {
     if (/constructor/i.test(window.HTMLElement) ||
