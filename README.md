@@ -33,6 +33,3 @@ web-app for learning nades in CS:GO
 * [Crossroads.js](https://millermedeiros.github.io/crossroads.js/) - JavaScript Routes System
 * [clipboard.js](https://clipboardjs.com/) - copy text to clipboard
 * [Ubuntu font](https://design.ubuntu.com/font/) - typography
-
-## License
-This project is released under the GNU GPL License - see the [LICENSE](LICENSE) file for details
